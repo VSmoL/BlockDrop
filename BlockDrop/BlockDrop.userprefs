@@ -1,14 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu\scripts\PlayGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Enemy\EnemyMovementScirpt.js">
     <Files>
       <File FileName="Assets\MainMenu\scripts\PlayGame.cs" Line="1" Column="1" />
       <File FileName="Assets\MainMenu\scripts\ScrollingScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\MainMenu\scripts\LetterDropScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Enemy\EnemyMovementScirpt.js" Line="4" Column="28" />
+      <File FileName="Assets\Game\Enemy\EnemySpawnScript.js" Line="22" Column="78" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\Game\EnemySpawn.cs" line="19" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
