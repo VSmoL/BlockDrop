@@ -4,11 +4,11 @@
 public var enemy : GameObject;
 
 // Variable to know how fast we should create new enemies
-public var spawnTime : float = 2;
+public var spawnTime : float = 0.2;
 
 function Start() {  
     // Call the 'addEnemy' function every 'spawnTime' seconds
-    InvokeRepeating("addEnemy", spawnTime, spawnTime);
+   	InvokeRepeating("addEnemy", 2, spawnTime);
 }
 
 // New function to spawn an enemy

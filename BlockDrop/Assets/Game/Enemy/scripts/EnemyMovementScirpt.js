@@ -13,5 +13,5 @@ function Start () {
 
     // Destroy the enemy in 3 seconds,
     // when it is no longer visible on the screen
-    Destroy(gameObject, 3);
+    //Destroy(gameObject, 3);
 }
