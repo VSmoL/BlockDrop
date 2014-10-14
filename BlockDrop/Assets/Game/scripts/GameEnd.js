@@ -1,9 +1,6 @@
 ﻿#pragma strict
 
-function OnMouseDown()
-{
-  Destroy(gameObject);
-}
+
 
 function OnTriggerEnter2D(obj : Collider2D) {  
     var name = obj.gameObject.name;
@@ -12,6 +9,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
     if (name == "bottomheader") {
         // Destroy itself (the enemy)
         Destroy(gameObject);
+        GameMaster.currentScore = 0;
         Application.LoadLevel("MainMenu");
     }
 }
