@@ -1,4 +1,9 @@
 ﻿#pragma strict
 
-static var currentScore : int = 0;
-static var multiplyScore : int = 0;
+//Score
+static var currentScore = 0;
+static var multiplyScore = 0;
+
+//EnemySpawn
+static var enemySpawnRate = 1.0;
+static var enemyMovementSpeed = -5.0;

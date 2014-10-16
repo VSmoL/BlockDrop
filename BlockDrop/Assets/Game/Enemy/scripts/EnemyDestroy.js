@@ -1,19 +1,4 @@
 #pragma strict
-//function OnMouseDown()
-//{
-//	Debug.Log(gameObject.name);
-//	if (gameObject.name == "Enemy(Clone)"){
-//		Destroy(gameObject);
-//		GameMaster.multiplyScore += 10;
-//		GameMaster.currentScore += GameMaster.multiplyScore;
-//	}
-//	if (gameObject.name != "Enemy(Clone)"){
-//		Destroy(gameObject);
-//		GameMaster.multiplyScore = 10;
-//		Debug.Log("ohi meni");
-//	}
-//}
-
 function Update(){
 		if(Input.GetMouseButtonDown(0)){
 	
@@ -33,10 +18,3 @@ function Update(){
 		}
 	}
 }
-
-//PC Testing
-//function Update(){
-//	if(Input.GetMouseButtonDown(0)){
-//		Debug.Log(gameObject.name);
-//	}
-//}
