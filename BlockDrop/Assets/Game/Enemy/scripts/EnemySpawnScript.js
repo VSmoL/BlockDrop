@@ -2,37 +2,15 @@
 
 // Variable to store the enemy prefab
 public var enemy : GameObject;
-var countdown : GUIText;
+enemy.transform.localScale.x = GameMaster.enemyXSize;
+enemy.transform.localScale.y = GameMaster.enemyYSize;
 
-function Start() {   
-	startCountDown();
-}
-
-function startCountDown(){
- 	countdown.fontSize = Mathf.Min(Screen.height,Screen.width)/1;
- 
-    countdown.text = "3";    
-    yield WaitForSeconds (1.5);  
- 
-    countdown.text = "2";    
-    yield WaitForSeconds (1.5);
- 
-    countdown.text = "1";    
-    yield WaitForSeconds (1.5);
- 
-    countdown.text = "GO";    
-    yield WaitForSeconds (1.5);
- 
-    countdown.enabled = false; 
-    
-    startGame();
-}
-
-function startGame(){
+function startSpawn(){
     addEnemy();
-    InvokeRepeating("increaseSpawnRate", 1, 5);
-    InvokeRepeating("increaseMovementSpeed", 1, 5);
-}
+    InvokeRepeating("increaseSpawnRate", 1, 1);
+    InvokeRepeating("increaseMovementSpeed", 1, 1);
+    InvokeRepeating("decreaseEnemySize", 1, 1);
+};
 
 // New function to spawn an enemy
 function addEnemy() {
@@ -51,10 +29,15 @@ function addEnemy() {
 }
 
 function increaseSpawnRate(){
-	GameMaster.enemySpawnRate *= (1 - 0.01);
-	return GameMaster.enemySpawnRate;
+	GameStart.enemySpawnRate *= (1 - 0.1);
+	return GameStart.enemySpawnRate;
 }
 
 function increaseMovementSpeed(){
-	GameMaster.enemyMovementSpeed *= (1 + 0.01);
+	GameStart.enemyMovementSpeed *= (1 + 0.01);
+}
+
+function decreaseEnemySize(){
+	enemy.transform.localScale.y *= (1 - 0.01);
+	enemy.transform.localScale.x *= (1 - 0.01);
 }

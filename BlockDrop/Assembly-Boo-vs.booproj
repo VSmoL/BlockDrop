@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{2FB3EE27-0BF3-11DC-AC28-A46B6C35F2F5}</ProjectGuid>
+	<ProjectGuid>{BCA35297-3A20-E9C3-E142-ED1B6BF23F7F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<AssemblyName>Assembly-Boo</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,13 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game\Enemy\scripts\EnemyDestroy.js" />
-     <Compile Include="Assets\Game\Enemy\scripts\EnemyMovementScirpt.js" />
-     <Compile Include="Assets\Game\Enemy\scripts\EnemySpawnScript.js" />
-     <Compile Include="Assets\Game\scripts\GameDrawScore.js" />
-     <Compile Include="Assets\Game\scripts\GameEnd.js" />
-     <Compile Include="Assets\Game\scripts\GameMaster.js" />
-     <Compile Include="Assets\Game\scripts\GameStart.js" />
+     <Compile Include="Assets\Game\Enemy\scripts\EnemySizeScript.boo" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
