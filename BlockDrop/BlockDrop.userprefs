@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Enemy\scripts\EnemySpawnScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu\scripts\BackgroundColorChange.js">
     <Files>
-      <File FileName="Assets\Game\Enemy\scripts\EnemySpawnScript.js" Line="27" Column="54" />
-      <File FileName="Assets\Game\Enemy\scripts\EnemyMovementScirpt.js" Line="6" Column="39" />
       <File FileName="Assets\Game\scripts\GameMaster.js" Line="1" Column="1" />
-      <File FileName="Assets\Game\scripts\GameStart.js" Line="19" Column="36" />
+      <File FileName="Assets\Game\Enemy\scripts\EnemySpawnScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Game\Enemy\scripts\EnemyMovementScirpt.js" Line="1" Column="1" />
+      <File FileName="Assets\Game\scripts\GameStart.js" Line="1" Column="1" />
+      <File FileName="Assets\MainMenu\scripts\BackgroundColorChange.js" Line="9" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
