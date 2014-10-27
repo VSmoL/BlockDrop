@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-function OnTriggerEnter2D(obj : Collider2D) {  
+function OnTriggerExit2D(obj : Collider2D) {  
     var name = obj.gameObject.name;
 
     // Ends game if 'enemy' collides 'bottomheader'

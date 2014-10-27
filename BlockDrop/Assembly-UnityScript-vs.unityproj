@@ -54,6 +54,13 @@
      <Compile Include="Assets\Game\scripts\GameMaster.js" />
      <Compile Include="Assets\Game\scripts\GameStart.js" />
      <Compile Include="Assets\MainMenu\scripts\BackgroundColorChange.js" />
+     <Compile Include="Assets\MainMenu\scripts\BackgroundScroll.js" />
+     <Compile Include="Assets\MainMenu\scripts\EndScreenFadeOut.js" />
+     <Compile Include="Assets\MainMenu\scripts\ExitGame.js" />
+     <Compile Include="Assets\MainMenu\scripts\PlayGame.js" />
+     <Compile Include="Assets\MainMenu\scripts\PressedButton.js" />
+     <Compile Include="Assets\MainMenu\scripts\ScreenFade.js" />
+     <Compile Include="Assets\MainMenu\scripts\StartScreenFadeIn.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

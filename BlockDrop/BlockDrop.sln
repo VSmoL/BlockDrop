@@ -1,8 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{BAB11204-85F5-4287-F087-D0EEC540F8A9}") = "BlockDrop", "Assembly-CSharp.csproj", "{F4E33C11-CB1F-167D-5319-C83556392665}"
-EndProject
 Project("{BAB11204-85F5-4287-F087-D0EEC540F8A9}") = "BlockDrop", "Assembly-UnityScript.unityproj", "{2FB3EE27-0BF3-11DC-AC28-A46B6C35F2F5}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4E33C11-CB1F-167D-5319-C83556392665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4E33C11-CB1F-167D-5319-C83556392665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4E33C11-CB1F-167D-5319-C83556392665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4E33C11-CB1F-167D-5319-C83556392665}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FB3EE27-0BF3-11DC-AC28-A46B6C35F2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FB3EE27-0BF3-11DC-AC28-A46B6C35F2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FB3EE27-0BF3-11DC-AC28-A46B6C35F2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-			GlobalSection(MonoDevelopProperties) = preSolution
+																								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-UnityScript.unityproj
 		Policies = $0
 		$0.TextStylePolicy = $1
