@@ -2,8 +2,8 @@
 
 // Variable to store the enemy prefab
 public var enemy : GameObject;
-enemy.transform.localScale.x = GameMaster.enemyXSize;
-enemy.transform.localScale.y = GameMaster.enemyYSize;
+enemy.transform.localScale.x = GameStart.enemySizeX;
+enemy.transform.localScale.y = GameStart.enemySizeY;
 
 function startSpawn(){
     addEnemy();
@@ -24,7 +24,7 @@ function addEnemy() {
 
 	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(enemy, spawnPoint, Quaternion.identity);
-	    yield WaitForSeconds(GameMaster.enemySpawnRate);
+	    yield WaitForSeconds(GameStart.enemySpawnRate);
     }
 }
 

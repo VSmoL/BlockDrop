@@ -9,8 +9,12 @@ static var enemySpawnRate = 1.0;
 static var enemyMovementSpeed = -5.0;
 
 //EnemyStartSize
-static var enemyXSize = 0.5;
-static var enemyYSize = 0.5;
+static var enemySize = 0.5;
 
 //LastScreen
 static var LastScreenName = "";
+
+//GameMode
+static var StageMode = false;
+static var CustomMode = false;
+static var RandomMode = false;

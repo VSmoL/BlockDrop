@@ -18,6 +18,14 @@ function Update(){
 				ScreenFadeOut.sceneName = "Game";
 				break;
 			case "RandomButton":
+				//Tell which mode
+				GameMaster.StageMode = false;
+				GameMaster.CustomMode = false;
+				GameMaster.RandomMode = true;
+				
+				//Start Game
+				ScreenFadeOut.sceneEnding = true;
+				ScreenFadeOut.sceneName = "Game";
 				break;
 			case "CustomButton":
 				break;

@@ -1,11 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\EndScreenFadeOut.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\GameStart.js">
     <Files>
       <File FileName="Assets\scripts\PressedButton.js" Line="7" Column="2" />
-      <File FileName="Assets\scripts\GameMaster.js" Line="16" Column="32" />
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="11" Column="1" />
+      <File FileName="Assets\scripts\GameMaster.js" Line="12" Column="21" />
+      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="21" Column="22" />
       <File FileName="Assets\scripts\EndScreenFadeOut.js" Line="9" Column="1" />
+      <File FileName="Assets\scripts\Game\GameStart.js" Line="22" Column="50" />
+      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="26" Column="58" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="16" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
