@@ -10,12 +10,10 @@ function Update(){
 	
 		switch(hitObject.name){		
 			case "StartButton":
-				ScreenFadeOut.sceneEnding = true;
-				ScreenFadeOut.sceneName = "ModeSelect";
+				Application.LoadLevel("ModeSelect");
 				break;
 			case "StageButton":
-				ScreenFadeOut.sceneEnding = true;
-				ScreenFadeOut.sceneName = "Game";
+				Application.LoadLevel("Game");
 				break;
 			case "RandomButton":
 				//Tell which mode
@@ -23,15 +21,12 @@ function Update(){
 				GameMaster.CustomMode = false;
 				GameMaster.RandomMode = true;
 				
-				//Start Game
-				ScreenFadeOut.sceneEnding = true;
-				ScreenFadeOut.sceneName = "Game";
+				Application.LoadLevel("Game");
 				break;
 			case "CustomButton":
 				break;
 			case "BackButton":
-				ScreenFadeOut.sceneEnding = true;
-				ScreenFadeOut.sceneName = "MainMenu";
+				Application.LoadLevel("MainMenu");
 				break;
 		}
 	}

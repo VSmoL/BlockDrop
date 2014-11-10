@@ -10,6 +10,8 @@ function Update(){
 			case "ExitButton":
 				Application.Quit();
 				break;
+			default:
+				break;
 		}
 	}
 }
