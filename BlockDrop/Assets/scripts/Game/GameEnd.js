@@ -1,13 +1,16 @@
 ﻿#pragma strict
 
+public var popupbackground : GameObject;
+
 function OnTriggerExit2D(obj : Collider2D) {  
-    var name = obj.gameObject.name;
+    var collideObject = obj.gameObject;
 
     // Ends game if 'enemy' collides 'bottomheader'
-    if (name == "bottomheader") {
+    if (collideObject.name == "Enemy(Clone)") {
+   		popupbackground.SetActive(true);
         // Destroy itself (the enemy)
-        Destroy(gameObject);
+        Destroy(collideObject);
         GameMaster.currentScore = 0;
-        Application.LoadLevel("MainMenu");
+        //Application.LoadLevel("MainMenu");
     }
 }

@@ -42,15 +42,15 @@ function increaseMovementSpeed(){
 }
 
 function decreaseEnemySize(){
-	enemy.transform.localScale.y *= (1 - 0.01);
-	enemy.transform.localScale.x *= (1 - 0.01);
+	GameStart.enemySizeY *= (1 - 0.01);
+	GameStart.enemySizeX *= (1 - 0.01);
 }
 
 function addRandomValues(){
 	while(true){
-		GameStart.enemySpawnRate = Random.Range(0.1,1.0);
-		GameStart.enemyMovementSpeed = Random.Range(-10.0,-2.0);
-		enemy.transform.localScale.y = enemy.transform.localScale.x = Random.Range(0.05,0.5);
+		GameStart.enemySpawnRate = Random.Range(GameMaster.enemySpawnRateRandomMin,GameMaster.enemySpawnRateRandomMax);
+		GameStart.enemyMovementSpeed = Random.Range(GameMaster.enemyMovementSpeedRandomMin,GameMaster.enemyMovementSpeedRandomMax);
+		GameStart.enemySizeY = GameStart.enemySizeX = Random.Range(GameMaster.enemySizeRandomMin,GameMaster.enemySizeRandomMax);
 		yield WaitForSeconds(GameStart.enemySpawnRate);
 	}
 }

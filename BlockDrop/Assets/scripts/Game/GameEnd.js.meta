@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 380b73636360c654b99e4fff7baad317
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - endscreenbackground: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
