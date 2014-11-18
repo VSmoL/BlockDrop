@@ -54,8 +54,11 @@
      <Compile Include="Assets\scripts\Game\EnemyDestroy.js" />
      <Compile Include="Assets\scripts\Game\EnemyMovementScirpt.js" />
      <Compile Include="Assets\scripts\Game\EnemySpawnScript.js" />
+     <Compile Include="Assets\scripts\Game\GameDrawEndMultiplier.js" />
+     <Compile Include="Assets\scripts\Game\GameDrawEndScore.js" />
      <Compile Include="Assets\scripts\Game\GameDrawScore.js" />
      <Compile Include="Assets\scripts\Game\GameEnd.js" />
+     <Compile Include="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" />
      <Compile Include="Assets\scripts\Game\GameStart.js" />
      <Compile Include="Assets\scripts\GameMaster.js" />
      <Compile Include="Assets\scripts\LoadScene.js" />

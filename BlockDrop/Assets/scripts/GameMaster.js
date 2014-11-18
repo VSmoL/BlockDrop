@@ -1,7 +1,13 @@
 ﻿#pragma strict
 
+//GameOver
+static var GameOver = false;
+
 //Score
-static var currentScore = 0;
+static var currentScore = 0.0;
+static var endScore = 0.0;
+static var endMultiplier = 1.5;
+static var endMultipliedScore = 0;
 static var multiplyScore = 0;
 
 //EnemySpawn

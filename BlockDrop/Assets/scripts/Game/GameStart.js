@@ -14,6 +14,7 @@ function Start () {
 	enemyMovementSpeed = GameMaster.enemyMovementSpeed;
 	enemySpawnRate = GameMaster.enemySpawnRate;
 	enemySizeY = enemySizeX = GameMaster.enemySize;
+	GameMaster.GameOver = false;
 	startCountDown();
 }
 

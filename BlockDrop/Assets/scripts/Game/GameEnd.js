@@ -7,10 +7,17 @@ function OnTriggerExit2D(obj : Collider2D) {
 
     // Ends game if 'enemy' collides 'bottomheader'
     if (collideObject.name == "Enemy(Clone)") {
-   		popupbackground.SetActive(true);
-        // Destroy itself (the enemy)
-        Destroy(collideObject);
-        GameMaster.currentScore = 0;
-        //Application.LoadLevel("MainMenu");
+    	Destroy(collideObject);
+		GameOver();
     }
+}
+
+function GameOver(){
+	if(!GameMaster.GameOver){
+		popupbackground.SetActive(true);
+		GameMaster.endScore = GameMaster.currentScore;	
+		GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
+		GameMaster.currentScore = 0;	
+		GameMaster.GameOver = true;
+	}
 }
