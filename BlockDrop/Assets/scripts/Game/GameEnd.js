@@ -17,7 +17,11 @@ function GameOver(){
 		popupbackground.SetActive(true);
 		GameMaster.endScore = GameMaster.currentScore;	
 		GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
+		GameMaster.endGameSilverCoins = Mathf.Ceil(GameMaster.endMultipliedScore * 0.1);
 		GameMaster.currentScore = 0;	
 		GameMaster.GameOver = true;
+		
+		//Save data
+		PlayerPrefs.SetInt("TotalSilverBlock", PlayerPrefs.GetInt("TotalSilverBlock") + GameMaster.endGameSilverCoins);
 	}
 }

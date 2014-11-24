@@ -59,9 +59,12 @@
      <Compile Include="Assets\scripts\Game\GameDrawScore.js" />
      <Compile Include="Assets\scripts\Game\GameEnd.js" />
      <Compile Include="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" />
+     <Compile Include="Assets\scripts\Game\GameEndDrawSilverCoins.js" />
      <Compile Include="Assets\scripts\Game\GameStart.js" />
+     <Compile Include="Assets\scripts\Game\ProgressBar.js" />
      <Compile Include="Assets\scripts\GameMaster.js" />
      <Compile Include="Assets\scripts\LoadScene.js" />
+     <Compile Include="Assets\scripts\MenuDrawSilverBlock.js" />
      <Compile Include="Assets\scripts\PressedButton.js" />
      <Compile Include="Assets\scripts\ScreenFade.js" />
      <Compile Include="Assets\scripts\StartScreenFadeIn.js" />

@@ -1,28 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\GameMaster.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\GameEnd.js">
     <Files>
-      <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\PressedButton.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameMaster.js" Line="9" Column="31" />
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EndScreenFadeOut.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameStart.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ExitGame.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawEndScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawEndMultiplier.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameEndDrawSilverCoins.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameEnd.js" Line="25" Column="66" />
+      <File FileName="Assets\scripts\Game\GameDrawScore.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameDrawEndScore.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\MainMenu\scripts\EndScreenFadeOut.js" line="9" />
-      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" line="9" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
