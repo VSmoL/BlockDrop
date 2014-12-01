@@ -1,13 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\GameEnd.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShopPreviewRotatingEnemyColor.js">
     <Files>
-      <File FileName="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameEndDrawSilverCoins.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="5" Column="1" />
+      <File FileName="Assets\scripts\BackgroundColorChange.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\GameMaster.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameEnd.js" Line="25" Column="66" />
+      <File FileName="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameDrawScore.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameDrawEndScore.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MenuDrawSilverBlock.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\ChangeColor.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ChangeGrandientColor.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopEnemyRotate.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopPreviewRotatingEnemyColor.js" Line="17" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

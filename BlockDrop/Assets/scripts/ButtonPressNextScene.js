@@ -17,7 +17,15 @@ function Update(){
 			case "SettingButton":
 				Application.LoadLevel("ModeSelect");
 				break;
+			case "ShopButton":
+				Application.LoadLevel("Shop");
+				break;
 				
+			//Shop Buttons
+			case "ColorsButton":
+				Application.LoadLevel("ShopColors");
+				break;
+			
 			//Mode select Buttons
 			case "StageButton":
 				GameMaster.StageMode = true;

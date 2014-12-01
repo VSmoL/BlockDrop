@@ -18,7 +18,7 @@ static var enemySpawnRate = 1.0;
 static var enemyMovementSpeed = -5.0;
 
 //EnemyStartSize
-static var enemySize = 0.5;
+static var enemySize = 1;
 
 //LastScreen
 static var LastScreenName = "";
@@ -39,4 +39,4 @@ static var enemyMovementSpeedRandomMax = -2.0;
 
 //Random Size Random.Range(0.1,0.3);
 static var enemySizeRandomMin = 0.1;
-static var enemySizeRandomMax = 0.3;
+static var enemySizeRandomMax = 1;
