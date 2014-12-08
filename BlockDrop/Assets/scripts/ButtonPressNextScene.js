@@ -25,6 +25,11 @@ function Update(){
 			case "ColorsButton":
 				Application.LoadLevel("ShopColors");
 				break;
+				
+			//ShopColor Buttons
+			case "ShopColorBackButton":
+				Application.LoadLevel("Shop");
+				break;
 			
 			//Mode select Buttons
 			case "StageButton":

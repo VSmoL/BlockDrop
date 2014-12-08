@@ -1,26 +1,38 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShopPreviewRotatingEnemyColor.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\EnemyDestroy.js">
     <Files>
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="5" Column="1" />
-      <File FileName="Assets\scripts\BackgroundColorChange.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopColorClick.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyRotate.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\FirstTimeGameStartSettings.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopCheckUnlocked.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BackgroundColorChange.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawEndScore.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\MenuDrawSilverBlock.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\ChangeColor.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="8" Column="28" />
       <File FileName="Assets\scripts\ChangeGrandientColor.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\ShopEnemyRotate.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ShopPreviewRotatingEnemyColor.js" Line="17" Column="12" />
+      <File FileName="Assets\scripts\Game\EnemyChangeColor.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\EditorPrefsX.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopPrice.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DrawShopPrice.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DrawShopUnlocked.js" Line="5" Column="26" />
+      <File FileName="Assets\scripts\ShopScrollArea.js" Line="9" Column="35" />
+      <File FileName="Assets\scripts\Game\GameDrawScore.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\ShopCheckUnlocked.js" line="15" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\EnemyDestroy.js" line="5" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\EnemyDestroy.js" line="10" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\EnemyDestroy.js" line="16" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
