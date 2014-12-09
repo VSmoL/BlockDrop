@@ -22,6 +22,6 @@ function GameOver(){
 		GameMaster.GameOver = true;
 		
 		//Save data
-		PlayerPrefs.SetInt("TotalSilverBlock", PlayerPrefs.GetInt("TotalSilverBlock") + GameMaster.endGameSilverCoins);
+		PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") + GameMaster.endGameSilverCoins);
 	}
 }

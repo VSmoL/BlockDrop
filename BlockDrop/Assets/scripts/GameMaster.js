@@ -6,7 +6,7 @@ static var GameOver = false;
 //Score
 static var currentScore = 0.0;
 static var endScore = 0.0;
-static var endMultiplier = 1.5;
+static var endMultiplier = 1000;
 static var endMultipliedScore = 0;
 static var multiplyScore = 0;
 
@@ -40,3 +40,10 @@ static var enemyMovementSpeedRandomMax = -2.0;
 //Random Size Random.Range(0.1,0.3);
 static var enemySizeRandomMin = 0.1;
 static var enemySizeRandomMax = 1;
+
+//Menu
+static var mousePressDown;
+
+//Shop
+//ShopColor
+static var shopColorName;

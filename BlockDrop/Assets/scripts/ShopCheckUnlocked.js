@@ -1,6 +1,13 @@
 #pragma strict
 
-function Start () {
+var buyButton : GameObject;
+
+function Start(){
+	checkUnlocks ();
+	checkEnoughMoney();
+}
+
+public function checkUnlocks () {
 	//Get childs of ShopColorList
 	for (var child : Transform in transform){
 	
@@ -17,7 +24,24 @@ function Start () {
 						locked.gameObject.SetActive(true);
 					}
 				}
+				else if (EditorPrefsX.GetBool("Unlocked"+childColor.name)){
+					childColor.renderer.material.color.a = 1;
+					for (var locked : Transform in childColor){
+						locked.gameObject.SetActive(false);
+					}
+				}
 			}		
 		}
+	}
+}
+
+public function checkEnoughMoney () {
+	if(PlayerPrefs.GetInt("TotalGoldBlock") < ShopPrice.normalColorPrice){
+		buyButton.renderer.material.color.a = 0.5;
+		buyButton.collider2D.enabled = false;
+	}
+	else if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalColorPrice){
+		buyButton.renderer.material.color.a = 1;
+		buyButton.collider2D.enabled = true;
 	}
 }

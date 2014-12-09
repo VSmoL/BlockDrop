@@ -7,6 +7,7 @@ function Start () {
 		
 		//WhiteColor unlocked
 		EditorPrefsX.SetBool("UnlockedWhiteColor",true);
+		EditorPrefsX.SetColor("enemyColor", Color.white);
 	}
 	Application.LoadLevel("MainMenu");
 }
