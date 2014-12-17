@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: d2cbc5d9edd633b46ab9d6f97d794f93
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - EnemyFragmentClone: {fileID: 100000, guid: f2bafbf83721c5044ac45d69188b6af8, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

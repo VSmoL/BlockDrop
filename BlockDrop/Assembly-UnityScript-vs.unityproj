@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EnemyFragmentAddForce.js" />
      <Compile Include="Assets\scripts\BackgroundColorChange.js" />
      <Compile Include="Assets\scripts\BackgroundScroll.js" />
      <Compile Include="Assets\scripts\ButtonPressNextScene.js" />
