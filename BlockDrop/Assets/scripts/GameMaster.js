@@ -13,12 +13,13 @@ static var multiplyScore = 0;
 //Coins
 static var endGameSilverCoins = 0;
 
+//EnemyAttributes
 //EnemySpawn
 static var enemySpawnRate = 1;
-static var enemyMovementSpeed = -5.0;
+static var enemyMovementSpeed = -13.0;
 
 //EnemyStartSize
-static var enemySize = 1;
+static var enemySize = 0.5;
 
 //LastScreen
 static var LastScreenName = "";
@@ -27,6 +28,11 @@ static var LastScreenName = "";
 static var StageMode = false;
 static var CustomMode = false;
 static var RandomMode = false;
+
+//StageSelect
+static var enemySpawnRateArray = [1, 0.95, 0.90, 0.85, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50];
+static var enemyMovementSpeedArray = [3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0];
+static var enemySizeArray = [1.5, 1.4, 1.3, 1.2, 1.1, 1.0, 0.9, 0.8, 0.7, 0.6, 0.5];
 
 //Random Game Mode Values
 //Random SpawnRate

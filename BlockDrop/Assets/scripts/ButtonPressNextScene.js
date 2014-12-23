@@ -14,7 +14,7 @@ function Update(){
 	
 					//Main Menu Buttons	
 					case "StartButton":
-						Application.LoadLevel("ModeSelect");
+						Application.LoadLevel("ZoneSelect");
 						break;
 					case "SettingButton":
 						Application.LoadLevel("ModeSelect");

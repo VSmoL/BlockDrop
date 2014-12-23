@@ -8,8 +8,6 @@ function Update(){
 		var hit : RaycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 		var hitObject = hit.collider;
 	
-		Debug.Log(GameMaster.multiplyScore);
-	
 		switch(hitObject.name){		
 			case "Enemy(Clone)":
 

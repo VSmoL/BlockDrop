@@ -71,6 +71,7 @@
      <Compile Include="Assets\scripts\Game\GameEndDrawSilverBlocks.js" />
      <Compile Include="Assets\scripts\Game\GameStart.js" />
      <Compile Include="Assets\scripts\Game\ProgressBar.js" />
+     <Compile Include="Assets\scripts\Game\testing.js" />
      <Compile Include="Assets\scripts\GameMaster.js" />
      <Compile Include="Assets\scripts\ListOfUsedPlayerPrefs.js" />
      <Compile Include="Assets\scripts\ListShopItem.js" />
