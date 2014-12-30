@@ -55,6 +55,7 @@
      <Compile Include="Assets\scripts\DeletePlayerPref.js" />
      <Compile Include="Assets\scripts\DrawShopPrice.js" />
      <Compile Include="Assets\scripts\DrawShopSelected.js" />
+     <Compile Include="Assets\scripts\DrawStageSelectNumber.js" />
      <Compile Include="Assets\scripts\EditorPrefsX.js" />
      <Compile Include="Assets\scripts\EndScreenFadeOut.js" />
      <Compile Include="Assets\scripts\FirstTimeGameStartSettings.js" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\scripts\ListOfUsedPlayerPrefs.js" />
      <Compile Include="Assets\scripts\ListShopItem.js" />
      <Compile Include="Assets\scripts\MenuDrawGoldBlock.js" />
+     <Compile Include="Assets\scripts\MenuStageSelectGrid.js" />
      <Compile Include="Assets\scripts\PressedButton.js" />
      <Compile Include="Assets\scripts\ScaleScreen.js" />
      <Compile Include="Assets\scripts\ScreenFade.js" />
@@ -85,6 +87,8 @@
      <Compile Include="Assets\scripts\ShopEnemyRotate.js" />
      <Compile Include="Assets\scripts\ShopPrice.js" />
      <Compile Include="Assets\scripts\ShopScrollArea.js" />
+     <Compile Include="Assets\scripts\StageSelectNextScene.js" />
+     <Compile Include="Assets\scripts\StageSelectStageNumber.js" />
      <Compile Include="Assets\scripts\StartScreenFadeIn.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Ohjelmat/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

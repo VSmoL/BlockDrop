@@ -14,7 +14,7 @@ function Update(){
 	
 					//Main Menu Buttons	
 					case "StartButton":
-						Application.LoadLevel("ZoneSelect");
+						Application.LoadLevel("ModeSelect");
 						break;
 					case "SettingButton":
 						Application.LoadLevel("ModeSelect");
@@ -34,12 +34,44 @@ function Update(){
 						break;
 					
 					//Mode select Buttons
-					case "StageButton":
+					case "ArcadeButton":
 						GameMaster.StageMode = true;
 						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = false;
+						Application.LoadLevel("ZoneSelect");
+						break;
+					case "RandomButton":
+						//Tell which mode
+						GameMaster.StageMode = false;
+						GameMaster.CustomMode = false;
+						GameMaster.RandomMode = true;
 						Application.LoadLevel("Game");
 						break;
+					case "CustomButton":
+						break;
+						
+					//Zone select Buttons
+					case "Zone1Button":
+						GameMaster.StageMode = true;
+						GameMaster.CustomMode = false;
+						GameMaster.RandomMode = false;
+						Application.LoadLevel("StageSelect");
+						break;
+					case "ZoneBackButton":
+						GameMaster.StageMode = true;
+						GameMaster.CustomMode = false;
+						GameMaster.RandomMode = false;
+						Application.LoadLevel("ModeSelect");
+						break;
+					
+					//Stage select buttons
+					case "StageBackButton":
+						GameMaster.StageMode = true;
+						GameMaster.CustomMode = false;
+						GameMaster.RandomMode = false;
+						Application.LoadLevel("ZoneSelect");
+						break;
+					
 					case "RandomButton":
 						//Tell which mode
 						GameMaster.StageMode = false;
