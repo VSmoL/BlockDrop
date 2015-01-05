@@ -11,6 +11,9 @@ function OnTriggerExit2D(obj : Collider2D) {
 		    	Destroy(collideObject);
 				GameOver();
 				break;
+			case "EnemyBomb(Clone)":
+		    	Destroy(collideObject);
+				break;
 		}
 }
 
@@ -21,7 +24,8 @@ function GameOver(){
 		GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
 		GameMaster.endGameSilverCoins = Mathf.Ceil(GameMaster.endMultipliedScore * 0.1);
 		GameMaster.currentScore = 0;
-		GameMaster.multiplyScore = 0;	
+		GameMaster.multiplyScore = 0;
+		GameMaster.multiplier = 0;	
 		GameMaster.GameOver = true;
 		
 		//Save data

@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyFragmentAddForce.js" />
      <Compile Include="Assets\scripts\BackgroundColorChange.js" />
      <Compile Include="Assets\scripts\BackgroundScroll.js" />
      <Compile Include="Assets\scripts\ButtonPressNextScene.js" />
@@ -61,6 +60,7 @@
      <Compile Include="Assets\scripts\FirstTimeGameStartSettings.js" />
      <Compile Include="Assets\scripts\Game\EnemyChangeColor.js" />
      <Compile Include="Assets\scripts\Game\EnemyDestroy.js" />
+     <Compile Include="Assets\scripts\Game\EnemyFragmentAddForce.js" />
      <Compile Include="Assets\scripts\Game\EnemyMovementScirpt.js" />
      <Compile Include="Assets\scripts\Game\EnemyRotate.js" />
      <Compile Include="Assets\scripts\Game\EnemySpawnScript.js" />
@@ -70,7 +70,9 @@
      <Compile Include="Assets\scripts\Game\GameEnd.js" />
      <Compile Include="Assets\scripts\Game\GameEndDrawEndMultipliedScore.js" />
      <Compile Include="Assets\scripts\Game\GameEndDrawSilverBlocks.js" />
+     <Compile Include="Assets\scripts\Game\GameExtraSpawnScript.js" />
      <Compile Include="Assets\scripts\Game\GameStart.js" />
+     <Compile Include="Assets\scripts\Game\GameZigZag.js" />
      <Compile Include="Assets\scripts\Game\ProgressBar.js" />
      <Compile Include="Assets\scripts\Game\testing.js" />
      <Compile Include="Assets\scripts\GameMaster.js" />

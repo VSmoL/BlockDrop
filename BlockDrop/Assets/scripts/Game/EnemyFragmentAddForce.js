@@ -5,7 +5,6 @@ function Start () {
 	InvokeRepeating("addTransparent",0,0.01);
 	minimizeHalf();
 	InvokeRepeating("minimize",0,0.01);
-	yield WaitForSeconds(1.5);
 }
 
 function addForce(){

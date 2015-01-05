@@ -6,6 +6,7 @@ static var enemySizeX : float;
 static var enemySizeY : float;
 
 var enemySpawn : EnemySpawnScript;
+var extraSpawn : GameExtraSpawnScript;
 
 var countdown : GUIText;
 
@@ -36,4 +37,5 @@ function startCountDown(){
     countdown.enabled = false; 
     
     enemySpawn.startSpawn();
+   	extraSpawn.startSpawn();
 }

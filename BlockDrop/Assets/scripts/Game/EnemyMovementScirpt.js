@@ -7,4 +7,16 @@ function Start () {
     
    	transform.transform.localScale.y = GameStart.enemySizeY;
     transform.transform.localScale.x = GameStart.enemySizeX;
+    
+    if (GameMaster.gameZigZag)
+    {
+    	var number = Random.Range(0,2);
+    	if(number == 0){
+    		rigidbody2D.velocity.x -= GameStart.enemyMovementSpeed * 2;
+    	}
+    	else if(number == 1){
+    		rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * 2;
+    	}
+    	
+    }
 }
