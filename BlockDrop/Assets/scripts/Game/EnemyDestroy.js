@@ -3,6 +3,7 @@
 public var EnemyFragmentClone : GameObject;
 public var gameEnd : GameEnd;
 var countZigZagPressed : int = 0;
+var countShredderPressed : int = 0;
 
 function Update(){
 		if(Input.GetMouseButtonDown(0)){
@@ -45,7 +46,19 @@ function Update(){
 				for(var c=0; c <= 3; c++){
 					EnemyFragment(hitObject.gameObject);
 				}			
-				RemoveZigZag();				
+				ZigZag();				
+				Destroy(hitObject.gameObject);		
+					
+				break;
+			
+			case "EnemyShredder(Clone)":
+			
+				EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+			
+				for(var d=0; d <= 3; d++){
+					EnemyFragment(hitObject.gameObject);
+				}			
+				Shredder();				
 				Destroy(hitObject.gameObject);		
 					
 				break;
@@ -83,14 +96,26 @@ function EnemyFragment(hit : GameObject){
 	    Instantiate(EnemyFragmentClone, spawnPoint, Quaternion.identity);
 }
 
-function RemoveZigZag(){
+function ZigZag(){
 	countZigZagPressed += 1;
 	GameMaster.gameZigZag = true;	
 	
 	yield WaitForSeconds(5);
 	
 	if(countZigZagPressed == 1){
-		GameMaster.gameZigZag = false;
+		GameMaster.gameShredder = false;
 	}
-	countZigZagPressed -= 1;
+	countShredderPressed -= 1;
+}
+
+function Shredder(){
+	countShredderPressed += 1;
+	GameMaster.gameShredder = true;	
+	
+	yield WaitForSeconds(5);
+	
+	if(countShredderPressed == 1){
+		GameMaster.gameShredder = false;
+	}
+	countShredderPressed -= 1;
 }

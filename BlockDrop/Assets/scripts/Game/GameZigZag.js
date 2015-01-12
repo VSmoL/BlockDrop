@@ -6,18 +6,18 @@ function OnTriggerEnter2D(obj : Collider2D) {
 
 	if(GameMaster.gameZigZag){
 		if(name == "leftwallcollider" && collideObject.rigidbody2D.velocity.x < 0){
-			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * 2;
+			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 		else if(name == "rightwallcollider" && collideObject.rigidbody2D.velocity.x > 0){
-			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * 2;
+			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 	}
 	else{
 		if(name == "leftwallcollider" && collideObject.rigidbody2D.velocity.x < 0){
-			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * 2;
+			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 		else if(name == "rightwallcollider" && collideObject.rigidbody2D.velocity.x > 0){
-			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * 2;
+			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 	}
 }

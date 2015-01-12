@@ -2,15 +2,20 @@
 
 // Variable to store the enemy prefab
 public var enemy : GameObject;
+var spawnX1 : float;
+var spawnX2 : float;
+var spawnPoint;
 
 
 function startSpawn(){
 	if(GameMaster.RandomMode){
 		addRandomValues();
+		getSpawnArea();
 		addEnemy();
 	}
 	else{
-	    addEnemy();
+		getSpawnArea();
+		addEnemy();
 		InvokeRepeating("increaseSpawnRate", 1, 1);
 		InvokeRepeating("increaseMovementSpeed", 1, 1);
 		InvokeRepeating("decreaseEnemySize", 1, 1);
@@ -20,30 +25,22 @@ function startSpawn(){
 // New function to spawn an enemy
 function addEnemy() {
 	while (!GameMaster.GameOver){
-	    // Variables to store the X position of the spawn object
-	    var x1 = transform.position.x - renderer.bounds.size.x/2;
-	    var x2 = transform.position.x + renderer.bounds.size.x/2;
-
-	    // Randomly pick a point within the spawn object
-	    var spawnPoint = new Vector3(Random.Range(x1, x2), transform.position.y,8);
-
-	    // Create an enemy at the 'spawnPoint' position
-	    Instantiate(enemy, spawnPoint, Quaternion.identity);
-	    yield WaitForSeconds(GameStart.enemySpawnRate);
+	   spawnEnemy();
+	   yield WaitForSeconds(GameStart.enemySpawnRate);
     }
 }
 
 function increaseSpawnRate(){
-	GameStart.enemySpawnRate *= (1 - 0.01);
+	GameStart.enemySpawnRate *= (1 - GameMaster.enemySpawnRateIncrease);
 }
 
 function increaseMovementSpeed(){
-	GameStart.enemyMovementSpeed *= (1 + 0.01);
+	GameStart.enemyMovementSpeed *= (1 + GameMaster.enemyMovementSpeedIncrease);
 }
 
 function decreaseEnemySize(){
-	GameStart.enemySizeY *= (1 - 0.01);
-	GameStart.enemySizeX *= (1 - 0.01);
+	GameStart.enemySizeY *= (1 - GameMaster.enemySizeIncrease);
+	GameStart.enemySizeX *= (1 - GameMaster.enemySizeIncrease);
 }
 
 function addRandomValues(){
@@ -53,4 +50,30 @@ function addRandomValues(){
 		GameStart.enemySizeY = GameStart.enemySizeX = Random.Range(GameMaster.enemySizeRandomMin,GameMaster.enemySizeRandomMax);
 		yield WaitForSeconds(GameStart.enemySpawnRate);
 	}
+}
+
+function spawnEnemy(){
+	if (GameMaster.gameShredder){
+		GameMaster.shredderMultiplySpawn = Random.Range(GameMaster.shredderMin, GameMaster.shredderMax);
+		for(var i=0; i <= GameMaster.shredderMultiplySpawn; i++){
+			// Randomly pick a point within the spawn object
+		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,i);
+
+		    // Create an enemy at the 'spawnPoint' position
+		    Instantiate(enemy, spawnPoint, Quaternion.identity);
+		}	
+	}
+	else{
+		// Randomly pick a point within the spawn object
+	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,0);
+
+	    // Create an enemy at the 'spawnPoint' position
+	    Instantiate(enemy, spawnPoint, Quaternion.identity);
+	}
+}
+
+function getSpawnArea(){
+	// Variables to store the X position of the spawn object
+   	spawnX1 = transform.position.x - renderer.bounds.size.x/2;
+    spawnX2 = transform.position.x + renderer.bounds.size.x/2;
 }

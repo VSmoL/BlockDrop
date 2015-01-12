@@ -12,10 +12,10 @@ function Start () {
     {
     	var number = Random.Range(0,2);
     	if(number == 0){
-    		rigidbody2D.velocity.x -= GameStart.enemyMovementSpeed * 2;
+    		rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
     	}
     	else if(number == 1){
-    		rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * 2;
+    		rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
     	}
     	
     }
