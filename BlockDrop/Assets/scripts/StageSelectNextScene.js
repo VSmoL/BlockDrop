@@ -1,6 +1,5 @@
 ﻿#pragma strict
 
-var stageNumber;
 private var StageSelectStageNumberScript : StageSelectStageNumber;
 
 function Update(){
@@ -15,14 +14,13 @@ function Update(){
 			if(GameMaster.mousePressDown == hitObjectUp && hitObjectUp.tag == "StageSelect"){		
 			
 				StageSelectStageNumberScript = hitObjectUp.GetComponent("StageSelectStageNumber");
-				stageNumber = StageSelectStageNumberScript.stageNumber;
+				GameMaster.stageNumber = StageSelectStageNumberScript.stageNumber;
 						
 				switch(hitObjectUp.name){	
-					//Color shop
-					case "StageSelectStageButton"+ stageNumber.ToString():
-						GameMaster.enemySpawnRate = GameMaster.enemySpawnRateArray[stageNumber];
-						GameMaster.enemyMovementSpeed = GameMaster.enemyMovementSpeedArray[stageNumber];
-						GameMaster.enemySize = GameMaster.enemySizeArray[stageNumber];
+					case "StageSelectStageButton"+ GameMaster.stageNumber.ToString():
+						GameMaster.enemySpawnRate = GameMaster.enemySpawnRateArray[GameMaster.stageNumber];
+						GameMaster.enemyMovementSpeed = GameMaster.enemyMovementSpeedArray[GameMaster.stageNumber];
+						GameMaster.enemySize = GameMaster.enemySizeArray[GameMaster.stageNumber];
 						Application.LoadLevel("Game");
 					break;					
 				}			

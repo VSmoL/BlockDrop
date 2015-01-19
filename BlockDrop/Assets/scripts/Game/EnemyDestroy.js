@@ -2,6 +2,7 @@
 
 public var EnemyFragmentClone : GameObject;
 public var gameEnd : GameEnd;
+public var drawMultiplierScore : GameObject;
 var countZigZagPressed : int = 0;
 var countShredderPressed : int = 0;
 
@@ -23,44 +24,58 @@ function Update(){
 				for(var a=0; a <= 3; a++){
 					EnemyFragment(hitObject.gameObject);
 				}
+				DrawFloatingScore(hitObject.gameObject);
 				
 				Destroy(hitObject.gameObject);			
 				break;
 					
-			case "EnemyBomb(Clone)":
-			
-				EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+			case "ExtraEnemy(Clone)":		
+				switch(GameMaster.zoneNumber){
 				
-				for(var b=0; b <= 3; b++){
-					EnemyFragment(hitObject.gameObject);
+					//Debug
+					case 0:
+						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+	
+						for(var x=0; x <= 3; x++){
+							EnemyFragment(hitObject.gameObject);
+						}		
+										
+						Destroy(hitObject.gameObject);
+						break;
+				
+					//Bomb
+					case 1:
+						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+	
+						for(var b=0; b <= 3; b++){
+							EnemyFragment(hitObject.gameObject);
+						}						
+						Destroy(hitObject.gameObject);
+						gameEnd.GameOver();
+						break;
+					
+					//ZigZag
+					case 2:
+						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+
+						for(var c=0; c <= 3; c++){
+							EnemyFragment(hitObject.gameObject);
+						}			
+						ZigZag();				
+						Destroy(hitObject.gameObject);
+						break;
+					
+					//Shredder
+					case 3:
+						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
+
+						for(var d=0; d <= 3; d++){
+							EnemyFragment(hitObject.gameObject);
+						}			
+						Shredder();				
+						Destroy(hitObject.gameObject);	
+						break;
 				}						
-				Destroy(hitObject.gameObject);
-				gameEnd.GameOver();
-						
-				break;
-				
-			case "EnemyZigZag(Clone)":
-			
-				EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-			
-				for(var c=0; c <= 3; c++){
-					EnemyFragment(hitObject.gameObject);
-				}			
-				ZigZag();				
-				Destroy(hitObject.gameObject);		
-					
-				break;
-			
-			case "EnemyShredder(Clone)":
-			
-				EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-			
-				for(var d=0; d <= 3; d++){
-					EnemyFragment(hitObject.gameObject);
-				}			
-				Shredder();				
-				Destroy(hitObject.gameObject);		
-					
 				break;
 				
 //			case "EnemyNegative(Clone)":
@@ -77,23 +92,22 @@ function Update(){
 				
 					
 			default:
-				GameMaster.multiplyScore = 0;
+				GameMaster.multiplier = 0;
 				break;
 		}
 	}
 }
 
 function EnemyFragment(hit : GameObject){
-		// Variables to store the X position of the spawn object
-//	    var x = hit.renderer.bounds.center;
-//	    var y = hit.renderer.bounds.center;
-//
-//	    // Randomly pick a point within the spawn object
-//	    var spawnPoint = new Vector3(hit.point.x, hit.point.y,8);
+
 	    var spawnPoint = hit.renderer.bounds.center;
 
-	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(EnemyFragmentClone, spawnPoint, Quaternion.identity);
+}
+
+function DrawFloatingScore(hit : GameObject){
+	 var spawnPoint = Camera.main.WorldToViewportPoint(hit.renderer.bounds.center);
+	 Instantiate(drawMultiplierScore, spawnPoint, Quaternion.identity);
 }
 
 function ZigZag(){
@@ -103,10 +117,11 @@ function ZigZag(){
 	yield WaitForSeconds(5);
 	
 	if(countZigZagPressed == 1){
-		GameMaster.gameShredder = false;
+		GameMaster.gameZigZag = false;
 	}
-	countShredderPressed -= 1;
+	countZigZagPressed -= 1;
 }
+
 
 function Shredder(){
 	countShredderPressed += 1;

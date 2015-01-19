@@ -2,7 +2,7 @@
 
 // Fade the color from red to green
 // back and forth over the defined duration
-var bgColor : Color[] = [Color(1,0,0,1), Color(1,0.5,0,1), Color(1,1,0,1), Color(0,1,0,1), Color(0,1,1,1), Color(0,0,1,1), Color(1,0,1,1)];	
+var bgColor : Color[] = [Color(1,0.5,0.5,0.75), Color(1,0.75,0.5,0.75), Color(1,1,0.5,0.75), Color(0.5,1,0.5,0.75), Color(0.5,1,1,0.75), Color(0.5,0.5,1,0.75), Color(1,0.5,1,0.75)];	
 
 var nextIndex : int;
 

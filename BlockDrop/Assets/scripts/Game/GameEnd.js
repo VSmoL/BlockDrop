@@ -11,7 +11,7 @@ function OnTriggerExit2D(obj : Collider2D) {
 		    	Destroy(collideObject);
 				GameOver();
 				break;
-			case "EnemyBomb(Clone)":
+			case "ExtraEnemy(Clone)":
 		    	Destroy(collideObject);
 				break;
 		}

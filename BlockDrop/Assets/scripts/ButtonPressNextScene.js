@@ -51,12 +51,6 @@ function Update(){
 						break;
 						
 					//Zone select Buttons
-					case "Zone1Button":
-						GameMaster.StageMode = true;
-						GameMaster.CustomMode = false;
-						GameMaster.RandomMode = false;
-						Application.LoadLevel("StageSelect");
-						break;
 					case "ZoneBackButton":
 						GameMaster.StageMode = true;
 						GameMaster.CustomMode = false;

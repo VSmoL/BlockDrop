@@ -33,6 +33,8 @@ static var CustomMode = false;
 static var RandomMode = false;
 
 //StageSelect
+static var zoneNumber : int = 0;
+static var stageNumber : int;
 static var enemySpawnRateArray = [1, 0.95, 0.90, 0.85, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50];
 static var enemyMovementSpeedArray = [-3.0, -3.5, -4.0, -4.5, -5.0, -5.5, -6.0, -6.5, -7.0, -7.5, -8.0];
 static var enemySizeArray = [1.5, 1.4, 1.3, 1.2, 1.1, 1.0, 0.9, 0.8, 0.7, 0.6, 0.5];

@@ -1,39 +1,38 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BackgroundColorChange.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DrawShopPrice.js">
     <Files>
-      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="60" Column="88" />
-      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="120" Column="8" />
+      <File FileName="Assets\scripts\Game\GameDrawMultiplierScore.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MenuDrawGoldBlock.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BackgroundColorChange.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\StageSelectNextScene.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\ShopCheckUnlocked.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\MenuStageSelectGrid.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\DrawStageSelectNumber.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DrawShopPrice.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DrawShopPrice.js" Line="4" Column="1" />
       <File FileName="Assets\scripts\Game\GameStart.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="13" Column="1" />
+      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\ShopBuy.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameMaster.js" Line="69" Column="41" />
+      <File FileName="Assets\scripts\GameMaster.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\StageSelectStageNumber.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameExtraSpawnScript.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\EnemyFragmentAddForce.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game\GameZigZag.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\BackgroundColorChange.js" Line="30" Column="124" />
+      <File FileName="Assets\scripts\ZoneSelectZoneNumber.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ZoneSelectNextScene.js" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Assembly-UnityScript" expanded="True">
-            <Node name="scripts" expanded="True">
-              <Node name="Game" expanded="True" />
-              <Node name="BackgroundColorChange.js" selected="True" />
-            </Node>
-          </Node>
+          <Node name="Assembly-UnityScript" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
+        <State selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
