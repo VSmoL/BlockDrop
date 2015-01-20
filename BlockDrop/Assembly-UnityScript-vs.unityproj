@@ -49,12 +49,11 @@
      <Compile Include="Assets\scripts\BackgroundColorChange.js" />
      <Compile Include="Assets\scripts\BackgroundScroll.js" />
      <Compile Include="Assets\scripts\ButtonPressNextScene.js" />
-     <Compile Include="Assets\scripts\ChangeColor.js" />
-     <Compile Include="Assets\scripts\ChangeGrandientColor.js" />
+     <Compile Include="Assets\scripts\ChangeBlockSprite.js" />
+     <Compile Include="Assets\scripts\ChangeEvilBlockSprite.js" />
      <Compile Include="Assets\scripts\DeletePlayerPref.js" />
      <Compile Include="Assets\scripts\DrawShopPrice.js" />
      <Compile Include="Assets\scripts\DrawShopSelected.js" />
-     <Compile Include="Assets\scripts\DrawStageSelectNumber.js" />
      <Compile Include="Assets\scripts\EditorPrefsX.js" />
      <Compile Include="Assets\scripts\EndScreenFadeOut.js" />
      <Compile Include="Assets\scripts\FirstTimeGameStartSettings.js" />
@@ -80,7 +79,6 @@
      <Compile Include="Assets\scripts\ListOfUsedPlayerPrefs.js" />
      <Compile Include="Assets\scripts\ListShopItem.js" />
      <Compile Include="Assets\scripts\MenuDrawGoldBlock.js" />
-     <Compile Include="Assets\scripts\MenuStageSelectGrid.js" />
      <Compile Include="Assets\scripts\PressedButton.js" />
      <Compile Include="Assets\scripts\ScaleScreen.js" />
      <Compile Include="Assets\scripts\ScreenFade.js" />
@@ -90,6 +88,8 @@
      <Compile Include="Assets\scripts\ShopEnemyRotate.js" />
      <Compile Include="Assets\scripts\ShopPrice.js" />
      <Compile Include="Assets\scripts\ShopScrollArea.js" />
+     <Compile Include="Assets\scripts\SpawnSpriteList.js" />
+     <Compile Include="Assets\scripts\SpriteList.js" />
      <Compile Include="Assets\scripts\StageSelectNextScene.js" />
      <Compile Include="Assets\scripts\StageSelectStageNumber.js" />
      <Compile Include="Assets\scripts\StartScreenFadeIn.js" />

@@ -8,6 +8,8 @@ function Start () {
 		//WhiteColor unlocked
 		EditorPrefsX.SetBool("UnlockedWhiteColor",true);
 		EditorPrefsX.SetColor("enemyColor", Color.white);
+		
+		PlayerPrefs.SetInt("enemyBlockSpriteIndex",2);
 	}
 	Application.LoadLevel("MainMenu");
 }

@@ -1,36 +1,39 @@
 #pragma strict
 
 var buyButton : GameObject;
+//Colors:							LRed				LOrange				LYellow			LGreen				LLBlue				LBlue				LPurple				LPink			Red				Orange				Yellow			Green			LBlue			Blue			Purple				Pink			DRed			DOrange						DYellow				DGreen				LDBlue				DBlue				DPurple				DPink					White			Grey			Black
+var blockColors : Color[] = [Color(1,0.5,0.5,1), Color(1,0.75,0.5,1), Color(1,1,0.5,1), Color(0.5,1,0.5,1), Color(0.5,1,1,1), Color(0.5,0.5,1,1), Color(0.75,0.5,1,1), Color(1,0.5,1,1), Color(1,0,0,1), Color(1,0.5,0,1), Color(1,1,0,1), Color(0,1,0,1), Color(0,1,1,1), Color(0,0,1,1), Color(0.75,0,1,1), Color(1,0,1,1), Color(0.5,0,0,1), Color(0.5,0.25,0,1),   Color(0.5,0.5,0,1),   Color(0,0.5,0,1),   Color(0,0.5,0.5,1),   Color(0,0,0.5,1),   Color(0.5,0,0.5,1), Color(0.75,0,0.75,1), Color(1,1,1,1), Color(0.5,0.5,0.5,1), Color(0,0,0,1)]; 
+var x : int;
 
 function Start(){
 	checkUnlocks ();
 	checkEnoughMoney();
+	
 }
 
 public function checkUnlocks () {
+	x = 0;
 	//Get childs of ShopColorList
 	for (var child : Transform in transform){
 	
 		//Get childs of ColorRow
-		for (var childColorGroup : Transform in child){
-		
-			//Get childs of ColorGroup
-			for (var childColor : Transform in childColorGroup){
-			
-				//Check if color is unlocked
-				if (!EditorPrefsX.GetBool("Unlocked"+childColor.name)){
-					childColor.renderer.material.color.a = 0.5;
-					for (var locked : Transform in childColor){
-						locked.gameObject.SetActive(true);
-					}
+		for (var childColor : Transform in child){
+			//Check if color is unlocke
+			if (!EditorPrefsX.GetBool("Unlocked"+childColor.name)){
+				childColor.renderer.material.color = blockColors[x];
+				childColor.renderer.material.color.a = 0.5;
+				for (var locked : Transform in childColor){
+					locked.gameObject.SetActive(true);
 				}
-				else if (EditorPrefsX.GetBool("Unlocked"+childColor.name)){
-					childColor.renderer.material.color.a = 1;
-					for (var locked : Transform in childColor){
-						locked.gameObject.SetActive(false);
-					}
+			}
+			else if (EditorPrefsX.GetBool("Unlocked"+childColor.name)){
+				childColor.renderer.material.color = blockColors[x];
+				childColor.renderer.material.color.a = 1;
+				for (var locked : Transform in childColor){
+					locked.gameObject.SetActive(false);
 				}
-			}		
+			}
+			x++;
 		}
 	}
 }
