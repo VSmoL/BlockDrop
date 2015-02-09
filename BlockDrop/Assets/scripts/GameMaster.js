@@ -21,7 +21,7 @@ static var enemySpawnRateIncrease : float = 0.015;
 static var enemyMovementSpeed : float = -3.0;
 static var enemyMovementSpeedIncrease : float = 0.015;
 
-static var enemySize : float = 1.0;
+static var enemySize : float = 0.5;
 static var enemySizeIncrease : float = 0.01;
 
 //LastScreen
@@ -37,12 +37,12 @@ static var zoneNumber : int = 0;
 static var stageNumber : int;
 static var enemySpawnRateArray = [1, 0.95, 0.90, 0.85, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50];
 static var enemyMovementSpeedArray = [-3.0, -3.5, -4.0, -4.5, -5.0, -5.5, -6.0, -6.5, -7.0, -7.5, -8.0];
-static var enemySizeArray = [1.5, 1.4, 1.3, 1.2, 1.1, 1.0, 0.9, 0.8, 0.7, 0.6, 0.5];
+static var enemySizeArray = [0.5, 0.476, 0.433, 0.4, 0.376, 0.333, 0.3, 0.276, 0.233, 0.2, 0.176];
 
 //GameAttributes
 //ZigZag
 static var gameZigZag : boolean = false;
-static var zigZagSpeedModifier : float = 1.5;
+static var zigZagSpeedModifier : float = 1;
 
 //Shredder
 static var gameShredder : boolean = false;
@@ -50,6 +50,11 @@ static var shredderMultiplySpawn : int;
 static var shredderMin : int = 1;
 static var shredderMax : int = 4;
 
+//MoveStop
+static var gameMoveStop : boolean = false;
+
+//UpDown
+static var gameTopBottom : boolean = false;
 
 //Random Game Mode Values
 //Random SpawnRate
@@ -73,3 +78,4 @@ static var backgroundTimer : float = 0.0;
 //Shop
 //ShopColor
 static var shopColorName;
+static var shopShapeName;

@@ -4,7 +4,7 @@ function Start () {
 	addForce();
 	InvokeRepeating("addTransparent",0,0.01);
 	minimizeHalf();
-	InvokeRepeating("minimize",0,0.01);
+    InvokeRepeating("minimize",0,0.1);
 }
 
 function addForce(){
@@ -16,13 +16,13 @@ function addTransparent(){
 }
 
 function minimizeHalf(){
-	transform.localScale.y = GameStart.enemySizeY * 0.75;
-    transform.localScale.x = GameStart.enemySizeX * 0.75;
+	transform.localScale.y = GameStart.enemySizeY * 0.90;
+    transform.localScale.x = GameStart.enemySizeX * 0.90;
 }
 
 function minimize(){
-	transform.localScale.y -= 0.002;
-    transform.localScale.x -= 0.002;
+	transform.localScale.y = transform.localScale.y * 0.90;
+    transform.localScale.x = transform.localScale.x * 0.90;
 }
 
 function Update(){

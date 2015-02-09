@@ -27,9 +27,12 @@ function Update(){
 					case "ColorsButton":
 						Application.LoadLevel("ShopColors");
 						break;
+					case "ShapesButton":
+						Application.LoadLevel("ShopShapes");
+						break;
 						
 					//ShopColor Buttons
-					case "ShopColorBackButton":
+					case "ShopBackButton":
 						Application.LoadLevel("Shop");
 						break;
 					
@@ -78,6 +81,10 @@ function Update(){
 						
 					//Game Buttons
 					case "MainMenuButton":
+						GameMaster.gameZigZag = false;	
+						GameMaster.gameMoveStop = false;
+						GameMaster.gameTopBottom = false;	
+						
 						Application.LoadLevel("MainMenu");
 						break;
 					case "RestartButton":

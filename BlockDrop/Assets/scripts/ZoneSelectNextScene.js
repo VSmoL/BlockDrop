@@ -15,7 +15,23 @@ function Update(){
 			
 				ZoneSelectZoneNumberScript = hitObjectUp.GetComponent("ZoneSelectZoneNumber");
 				GameMaster.zoneNumber = ZoneSelectZoneNumberScript.zoneNumber;
-								
+						
+				switch(GameMaster.zoneNumber){	
+					case 1:
+						break;
+					case 2:
+						GameMaster.gameZigZag = true;	
+						break;
+					case 3:
+						GameMaster.gameMoveStop = true;	
+						break;
+					case 4:
+						GameMaster.gameTopBottom = true;	
+						break;
+					case 5:	
+						break;
+				}
+												
 				switch(hitObjectUp.name){	
 					case "ZoneSelectZoneButton"+ GameMaster.zoneNumber.ToString():
 						Application.LoadLevel("StageSelect");

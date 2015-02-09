@@ -15,27 +15,27 @@ function startSpawn(){
 
 // New function to spawn an enemy
 function addExtra() {
-	while (!GameMaster.GameOver){
-		
-		var time = Random.Range(minWaitTime, maxWaitTime);
-		
-		yield WaitForSeconds (time);
-		
-//		extraSpawnOdd += 10;
-//		extraSpawnRandomNumber = Random.Range(0,100);
+//	while (!GameMaster.GameOver){
 //		
-//		Debug.Log(extraSpawnRandomNumber);
-		
-	
-	    // Variables to store the X position of the spawn object
-	    var x1 = transform.position.x - renderer.bounds.size.x/2;
-	    var x2 = transform.position.x + renderer.bounds.size.x/2;
-
-	    // Randomly pick a point within the spawn object
-	    var spawnPoint = new Vector3(Random.Range(x1, x2), transform.position.y,9);
-
-	    // Create an enemy at the 'spawnPoint' position
-	    Instantiate(enemyBomb, spawnPoint, Quaternion.identity);
-//	    yield WaitForSeconds(1);
-    }
+//		var time = Random.Range(minWaitTime, maxWaitTime);
+//		
+//		yield WaitForSeconds (time);
+//		
+////		extraSpawnOdd += 10;
+////		extraSpawnRandomNumber = Random.Range(0,100);
+////		
+////		Debug.Log(extraSpawnRandomNumber);
+//		
+//	
+//	    // Variables to store the X position of the spawn object
+//	    var x1 = transform.position.x - renderer.bounds.size.x/2;
+//	    var x2 = transform.position.x + renderer.bounds.size.x/2;
+//
+//	    // Randomly pick a point within the spawn object
+//	    var spawnPoint = new Vector3(Random.Range(x1, x2), transform.position.y,9);
+//
+//	    // Create an enemy at the 'spawnPoint' position
+//	    Instantiate(enemyBomb, spawnPoint, Quaternion.identity);
+////	    yield WaitForSeconds(1);
+//    }
 }

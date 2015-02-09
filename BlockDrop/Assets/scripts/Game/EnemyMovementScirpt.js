@@ -17,6 +17,19 @@ function Start () {
     	else if(number == 1){
     		rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
     	}
-    	
     }
+    if (GameMaster.gameMoveStop){
+    	moveStop();
+    }
+}
+
+function moveStop(){
+	yield WaitForSeconds(Random.Range(0.5, 1.0));
+	while(GameMaster.gameMoveStop){
+		rigidbody2D.velocity.y = 0;
+		yield WaitForSeconds(Random.Range(0.0, 1.0));
+		
+		rigidbody2D.velocity.y = GameStart.enemyMovementSpeed;
+		yield WaitForSeconds(Random.Range(0.0, 3.0));
+	}
 }

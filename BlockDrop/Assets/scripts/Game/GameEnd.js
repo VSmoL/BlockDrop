@@ -7,14 +7,14 @@ function OnTriggerExit2D(obj : Collider2D) {
 
 	// Ends game if 'enemy' collides 'bottomheader'
 	switch(collideObject.name){		
-			case "Enemy(Clone)":
-		    	Destroy(collideObject);
-				GameOver();
-				break;
-			case "ExtraEnemy(Clone)":
-		    	Destroy(collideObject);
-				break;
-		}
+		case "Enemy(Clone)":
+	    	Destroy(collideObject);
+			GameOver();
+			break;
+		case "ExtraEnemy(Clone)":
+	    	Destroy(collideObject);
+			break;
+	}
 }
 
 function GameOver(){
