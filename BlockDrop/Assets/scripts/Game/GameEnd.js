@@ -8,8 +8,15 @@ function OnTriggerExit2D(obj : Collider2D) {
 	// Ends game if 'enemy' collides 'bottomheader'
 	switch(collideObject.name){		
 		case "Enemy(Clone)":
-	    	Destroy(collideObject);
-			GameOver();
+			Destroy(collideObject);
+			if(!GameMaster.GameOver){
+				GameMaster.GameOver = true;
+//				Time.timeScale = 0.5;
+//				yield WaitForSeconds(1);
+//				Time.timeScale = 1;
+		    	
+				GameOver();
+			}
 			break;
 		case "ExtraEnemy(Clone)":
 	    	Destroy(collideObject);
@@ -18,17 +25,15 @@ function OnTriggerExit2D(obj : Collider2D) {
 }
 
 function GameOver(){
-	if(!GameMaster.GameOver){
-		popupbackground.SetActive(true);
-		GameMaster.endScore = GameMaster.currentScore;	
-		GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
-		GameMaster.endGameSilverCoins = Mathf.Ceil(GameMaster.endMultipliedScore * 0.1);
-		GameMaster.currentScore = 0;
-		GameMaster.multiplyScore = 0;
-		GameMaster.multiplier = 0;	
-		GameMaster.GameOver = true;
-		
-		//Save data
-		PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") + GameMaster.endGameSilverCoins);
-	}
+	popupbackground.SetActive(true);
+	GameMaster.endScore = GameMaster.currentScore;		
+	GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
+	GameMaster.endGameSilverCoins = Mathf.Ceil(GameMaster.endMultipliedScore * 0.1);
+	GameMaster.currentScore = 0;
+	GameMaster.multiplyScore = 0;
+	GameMaster.multiplier = 0;	
+	GameMaster.GameOver = true;
+	
+	//Save data
+	PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") + GameMaster.endGameSilverCoins);
 }

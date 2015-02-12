@@ -61,6 +61,7 @@
      <Compile Include="Assets\scripts\Game\EnemyBottomMovementScirpt.js" />
      <Compile Include="Assets\scripts\Game\EnemyChangeColor.js" />
      <Compile Include="Assets\scripts\Game\EnemyDestroy.js" />
+     <Compile Include="Assets\scripts\Game\EnemyFade.js" />
      <Compile Include="Assets\scripts\Game\EnemyFragmentAddForce.js" />
      <Compile Include="Assets\scripts\Game\EnemyMovementScirpt.js" />
      <Compile Include="Assets\scripts\Game\EnemyRotate.js" />

@@ -42,7 +42,7 @@ static var enemySizeArray = [0.5, 0.476, 0.433, 0.4, 0.376, 0.333, 0.3, 0.276, 0
 //GameAttributes
 //ZigZag
 static var gameZigZag : boolean = false;
-static var zigZagSpeedModifier : float = 1;
+static var zigZagSpeedModifier : float = 0.75;
 
 //Shredder
 static var gameShredder : boolean = false;
@@ -55,6 +55,9 @@ static var gameMoveStop : boolean = false;
 
 //UpDown
 static var gameTopBottom : boolean = false;
+
+//UpDown
+static var gameFade : boolean = false;
 
 //Random Game Mode Values
 //Random SpawnRate
@@ -71,6 +74,7 @@ static var enemySizeRandomMax = 1;
 
 //Menu
 static var mousePressDown;
+static var mousePressDownObjectScale;
 static var backgroundIndex : int;
 static var backgroundColor : Color;
 static var backgroundTimer : float = 0.0;

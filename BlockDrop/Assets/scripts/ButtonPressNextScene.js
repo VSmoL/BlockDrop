@@ -41,7 +41,7 @@ function Update(){
 						GameMaster.StageMode = true;
 						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = false;
-						Application.LoadLevel("ZoneSelect");
+						Application.LoadLevel("StageSelect");
 						break;
 					case "RandomButton":
 						//Tell which mode
@@ -83,7 +83,8 @@ function Update(){
 					case "MainMenuButton":
 						GameMaster.gameZigZag = false;	
 						GameMaster.gameMoveStop = false;
-						GameMaster.gameTopBottom = false;	
+						GameMaster.gameTopBottom = false;
+						GameMaster.gameFade = false;	
 						
 						Application.LoadLevel("MainMenu");
 						break;

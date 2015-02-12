@@ -1,13 +1,10 @@
 ﻿#pragma strict
 
 function OnMouseDown(){
-
-	animation["ButtonPress"].speed = 2.5;
-	animation.Play("ButtonPress");
+	GameMaster.mousePressDownObjectScale = transform.localScale;
+	transform.localScale *= 0.95;
 }
 
 function OnMouseUp(){
-
-	animation["ButtonPress"].speed = -1.5;
-	animation.Play("ButtonPress");
+	transform.localScale = GameMaster.mousePressDownObjectScale;
 }

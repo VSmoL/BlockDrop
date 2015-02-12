@@ -12,18 +12,44 @@ function Update(){
 			var hitObjectUp = hit.collider;
 				
 			if(GameMaster.mousePressDown == hitObjectUp && hitObjectUp.tag == "StageSelect"){		
-			
+				
 				StageSelectStageNumberScript = hitObjectUp.GetComponent("StageSelectStageNumber");
 				GameMaster.stageNumber = StageSelectStageNumberScript.stageNumber;
 						
-				switch(hitObjectUp.name){	
-					case "StageSelectStageButton"+ GameMaster.stageNumber.ToString():
-						GameMaster.enemySpawnRate = GameMaster.enemySpawnRateArray[GameMaster.stageNumber];
-						GameMaster.enemyMovementSpeed = GameMaster.enemyMovementSpeedArray[GameMaster.stageNumber];
-						GameMaster.enemySize = GameMaster.enemySizeArray[GameMaster.stageNumber];
+				switch(GameMaster.stageNumber){
+					case 0:
+						GameMaster.gameZigZag = true;
+						GameMaster.gameMoveStop = true;
+						GameMaster.gameTopBottom = true;
+						GameMaster.gameFade = true;
 						Application.LoadLevel("Game");
-					break;					
+						break;
+					case 1:
+						GameMaster.gameZigZag = true;
+						Application.LoadLevel("Game");
+						break;
+					case 2:
+						GameMaster.gameMoveStop = true;
+						Application.LoadLevel("Game");	
+						break;
+					case 3:
+						GameMaster.gameTopBottom = true;
+						Application.LoadLevel("Game");
+						break;
+					case 4:	
+						GameMaster.gameFade = true;
+						Application.LoadLevel("Game");
+						break;
 				}			
 			}
 		}
 }
+
+//Old stage select
+				//Vanilla stageselect	
+//					case "StageSelectStageButton"+ GameMaster.stageNumber.ToString():
+//						GameMaster.enemySpawnRate = GameMaster.enemySpawnRateArray[GameMaster.stageNumber];
+//						GameMaster.enemyMovementSpeed = GameMaster.enemyMovementSpeedArray[GameMaster.stageNumber];
+//						GameMaster.enemySize = GameMaster.enemySizeArray[GameMaster.stageNumber];
+//						Application.LoadLevel("Game");
+//					break;
