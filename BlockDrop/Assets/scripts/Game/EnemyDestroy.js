@@ -16,8 +16,8 @@ function Update(){
 		
 		var hit : RaycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 		var hitObject = hit.collider;
-	
-		switch(hitObject.name){		
+		switch(hitObject.name){	
+			
 			case "Enemy(Clone)":
 
 				GameMaster.multiplier += 1;
@@ -54,82 +54,16 @@ function Update(){
 				Instantiate(pressEffect, mousePos, Quaternion.identity);
 				
 				Destroy(hitObject.gameObject);			
-				break;
-				
-					
-//			case "EnemyEvil(Clone)":		
-//				switch(GameMaster.zoneNumber){
-//				
-//					//Debug
-//					case 0:
-//						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-//	
-//						for(var x=0; x <= 3; x++){
-//							EnemyFragment(hitObject.gameObject);
-//						}		
-//										
-//						Destroy(hitObject.gameObject);
-//						break;
-//				
-//					//Bomb
-//					case 1:
-//						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-//	
-//						for(var b=0; b <= 3; b++){
-//							EnemyFragment(hitObject.gameObject);
-//						}						
-//						Destroy(hitObject.gameObject);
-//						gameEnd.GameOver();
-//						break;
-//					
-//					//ZigZag
-//					case 2:
-//						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-//
-//						for(var c=0; c <= 3; c++){
-//							EnemyFragment(hitObject.gameObject);
-//						}			
-//						ZigZag();				
-//						Destroy(hitObject.gameObject);
-//						break;
-//					
-//					//Shredder
-//					case 3:
-//						EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-//
-//						for(var d=0; d <= 3; d++){
-//							EnemyFragment(hitObject.gameObject);
-//						}			
-//						Shredder();				
-//						Destroy(hitObject.gameObject);	
-//						break;
-//				}
-				
-				//spawn particle
-				pressEffect.GetComponent(ParticleSystem).startColor = Color(1,1,0,1);		
-				Instantiate(pressEffect, mousePos, Quaternion.identity);
-								
-				break;
-				
-//			case "EnemyNegative(Clone)":
-//			
-//				EnemyFragmentClone.GetComponent(SpriteRenderer).sprite = hitObject.gameObject.GetComponent(SpriteRenderer).sprite;
-//			
-//				for(var c=0; c <= 3; c++){
-//					EnemyFragment(hitObject.gameObject);
-//				}
-//				
-//				Destroy(hitObject.gameObject);			
-//				break;
-							
-				
-					
+				break;				
 			default:
 				GameMaster.multiplier = 0;
 				
 				//spawn particle
 				pressEffect.GetComponent(ParticleSystem).startColor = Color(1,0,0,1);
-				Instantiate(pressEffect, mousePos, Quaternion.identity);
+				if(!GameMaster.GameOver){
+					Instantiate(pressEffect, mousePos, Quaternion.identity);
+				}
+
 				break;
 		}
 	}

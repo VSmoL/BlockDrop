@@ -1,12 +1,15 @@
 ﻿#pragma strict
 
-public var endGameMultiplier : GameObject;
+public var endGameCoinsEarned : GameObject;
+public var endGameCoinIcon : GameObject;
+public var endGameTotalCoin : GameObject;
+public var endGameHighScore : GameObject;
 
 function Start(){
-	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/20;
+	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/14;
 	
 	for(var childText : Transform in transform){
-		childText.gameObject.GetComponent(GUIText).fontSize = Mathf.Min(Screen.height,Screen.width)/20;
+		childText.gameObject.GetComponent(GUIText).fontSize = transform.guiText.fontSize;
 	}
 	
 	while(GameMaster.endScore > parseInt(guiText.text)){
@@ -30,5 +33,10 @@ function Start(){
 
 function showMultiplier(){
 	yield WaitForSeconds(1);
-	endGameMultiplier.SetActive(true);
+	endGameCoinsEarned.SetActive(true);
+	endGameCoinIcon.SetActive(true);
+	endGameTotalCoin.SetActive(true);
+	if (GameMaster.HiScore){
+		endGameHighScore.SetActive(true);
+	}
 }

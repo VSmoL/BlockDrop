@@ -22,6 +22,7 @@ function Update(){
 						GameMaster.gameMoveStop = true;
 						GameMaster.gameTopBottom = true;
 						GameMaster.gameFade = true;
+						GameMaster.gameSwapPlace = true;
 						Application.LoadLevel("Game");
 						break;
 					case 1:
@@ -38,6 +39,10 @@ function Update(){
 						break;
 					case 4:	
 						GameMaster.gameFade = true;
+						Application.LoadLevel("Game");
+						break;
+					case 5:	
+						GameMaster.gameSwapPlace = true;
 						Application.LoadLevel("Game");
 						break;
 				}			

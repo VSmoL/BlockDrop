@@ -41,6 +41,7 @@ function Update(){
 						GameMaster.StageMode = true;
 						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = false;
+						GameMaster.gameMode = "Arcade";
 						Application.LoadLevel("StageSelect");
 						break;
 					case "RandomButton":
@@ -48,9 +49,16 @@ function Update(){
 						GameMaster.StageMode = false;
 						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = true;
+						GameMaster.gameMode = "Random";
 						Application.LoadLevel("Game");
 						break;
-					case "CustomButton":
+					case "SurvivalButton":
+						//Tell which mode
+						GameMaster.StageMode = false;
+						GameMaster.CustomMode = false;
+						GameMaster.RandomMode = true;
+						GameMaster.gameMode = "Survival";
+						Application.LoadLevel("Game");
 						break;
 						
 					//Zone select Buttons
@@ -66,7 +74,7 @@ function Update(){
 						GameMaster.StageMode = true;
 						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = false;
-						Application.LoadLevel("ZoneSelect");
+						Application.LoadLevel("ModeSelect");
 						break;
 					
 					case "RandomButton":
@@ -84,7 +92,8 @@ function Update(){
 						GameMaster.gameZigZag = false;	
 						GameMaster.gameMoveStop = false;
 						GameMaster.gameTopBottom = false;
-						GameMaster.gameFade = false;	
+						GameMaster.gameFade = false;
+						GameMaster.gameSwapPlace = false;
 						
 						Application.LoadLevel("MainMenu");
 						break;

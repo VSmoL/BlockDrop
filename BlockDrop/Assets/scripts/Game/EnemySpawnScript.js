@@ -15,10 +15,12 @@ function startSpawn(){
 	if(GameMaster.RandomMode){
 		addRandomValues();
 		getSpawnArea();
+		getBottomSpawnArea();
 		addEnemy();
 	}
 	else{
 		getSpawnArea();
+		getBottomSpawnArea();
 		addEnemy();
 		InvokeRepeating("increaseSpawnRate", 1, 1);
 		InvokeRepeating("increaseMovementSpeed", 1, 1);
@@ -71,14 +73,14 @@ function spawnEnemy(){
 		var TopBottom = Random.Range(0,2);
 		if (TopBottom == 0){
 			// Randomly pick a point within the spawn object
-	    	spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,0);
+	    	spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
 	    	
 	    	// Create an enemy at the 'spawnPoint' position
 	   		Instantiate(enemy, spawnPoint, Quaternion.identity);
 		}
 		else if (TopBottom == 1){
 			// Randomly pick a point within the spawn object
-			spawnPoint = new Vector3(Random.Range(spawnBottomX1, spawnBottomX2), bottomSpawn.transform.position.y,0);
+			spawnPoint = new Vector3(Random.Range(spawnBottomX1, spawnBottomX2), bottomSpawn.transform.position.y,1);
 			
 			// Create an enemy at the 'spawnPoint' position
 	    	Instantiate(bottomEnemy, spawnPoint, Quaternion.identity);
@@ -86,7 +88,7 @@ function spawnEnemy(){
 	}
 	else{
 		// Randomly pick a point within the spawn object
-	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,0);
+	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
 
 	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(enemy, spawnPoint, Quaternion.identity);

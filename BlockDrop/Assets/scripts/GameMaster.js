@@ -2,6 +2,7 @@
 
 //GameOver
 static var GameOver = false;
+static var HiScore = false;
 
 //Score
 static var currentScore = 0.0;
@@ -10,9 +11,10 @@ static var endMultiplier = 1.5;
 static var endMultipliedScore = 0;
 static var multiplyScore = 0;
 static var multiplier = 0;
+static var previousBest : int = 0;
 
 //Coins
-static var endGameSilverCoins = 0;
+static var endGameGoldCoins = 0;
 
 //EnemyAttributes
 static var enemySpawnRate : float = 1.0;
@@ -28,6 +30,7 @@ static var enemySizeIncrease : float = 0.01;
 static var LastScreenName = "";
 
 //GameMode
+static var gameMode : String;
 static var StageMode = false;
 static var CustomMode = false;
 static var RandomMode = false;
@@ -52,12 +55,12 @@ static var shredderMax : int = 4;
 
 //MoveStop
 static var gameMoveStop : boolean = false;
-
 //UpDown
 static var gameTopBottom : boolean = false;
-
 //UpDown
 static var gameFade : boolean = false;
+//SwapPlace
+static var gameSwapPlace : boolean = false;
 
 //Random Game Mode Values
 //Random SpawnRate

@@ -21,6 +21,9 @@ function Start () {
     if (GameMaster.gameMoveStop){
     	moveStop();
     }
+    if (GameMaster.gameSwapPlace){
+    	swapPlace();
+    }
 }
 
 function moveStop(){
@@ -31,5 +34,13 @@ function moveStop(){
 		
 		rigidbody2D.velocity.y = GameStart.enemyMovementSpeed;
 		yield WaitForSeconds(Random.Range(0.0, 3.0));
+	}
+}
+
+function swapPlace(){
+	yield WaitForSeconds(Random.Range(0.2, 0.5));
+	while(GameMaster.gameSwapPlace){
+		transform.position.x = Random.Range(-2.5, 2.5);
+		yield WaitForSeconds(Random.Range(0.5, 1.0));
 	}
 }

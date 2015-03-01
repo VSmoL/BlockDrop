@@ -4,6 +4,7 @@ static var enemyMovementSpeed : float;
 static var enemySpawnRate : float;
 static var enemySizeX : float;
 static var enemySizeY : float;
+public var score : GUIText;
 
 var enemySpawn : EnemySpawnScript;
 
@@ -14,6 +15,9 @@ function Start () {
 	enemyMovementSpeed = GameMaster.enemyMovementSpeed;
 	enemySpawnRate = GameMaster.enemySpawnRate;
 	enemySizeY = enemySizeX = GameMaster.enemySize;
+	
+	//score.GetComponent(SpriteRenderer).color.a = 1;
+	
 	GameMaster.GameOver = false;
 	startCountDown();
 }
