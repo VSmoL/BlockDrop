@@ -6,7 +6,7 @@ public var selectedText : GameObject;
 public var spriteList : GameObject;
 
 function Start(){
-	rotatingEnemy.renderer.material.color = EditorPrefsX.GetColor("enemyColor");
+	rotatingEnemy.GetComponent.<Renderer>().material.color = EditorPrefsX.GetColor("enemyColor");
 }
 
 function Update () {
@@ -30,7 +30,7 @@ function Update () {
 				//Check is color unlocked
 				if (!EditorPrefsX.GetBool("Unlocked"+hitObjectUp.name)){
 					GameMaster.shopShapeName = hitObjectUp.name;	
-					rotatingEnemy.renderer.material.color.a = 0.5;
+					rotatingEnemy.GetComponent.<Renderer>().material.color.a = 0.5;
 					rotatingEnemy.transform.FindChild("Locked").gameObject.SetActive(true);
 					buyButton.SetActive(true);
 					colorPrice.SetActive(true);
@@ -39,7 +39,7 @@ function Update () {
 				}
 				else if (EditorPrefsX.GetBool("Unlocked"+hitObjectUp.name)){
 					PlayerPrefs.SetInt("enemyBlockSpriteIndex", hitObjectUp.GetComponent(ShopShapeId).ShapeId);
-					rotatingEnemy.renderer.material.color.a = 1;
+					rotatingEnemy.GetComponent.<Renderer>().material.color.a = 1;
 					rotatingEnemy.transform.FindChild("Locked").gameObject.SetActive(false);
 					buyButton.SetActive(false);
 					colorPrice.SetActive(false);

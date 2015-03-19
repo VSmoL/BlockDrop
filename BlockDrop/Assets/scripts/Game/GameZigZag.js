@@ -5,19 +5,19 @@ function OnTriggerEnter2D(obj : Collider2D) {
     var name = transform.name;
 
 	if(GameMaster.gameZigZag){
-		if(name == "leftwallcollider" && collideObject.rigidbody2D.velocity.x < 0){
-			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
+		if(name == "leftwallcollider" && collideObject.GetComponent.<Rigidbody2D>().velocity.x < 0){
+			collideObject.GetComponent.<Rigidbody2D>().velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
-		else if(name == "rightwallcollider" && collideObject.rigidbody2D.velocity.x > 0){
-			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
+		else if(name == "rightwallcollider" && collideObject.GetComponent.<Rigidbody2D>().velocity.x > 0){
+			collideObject.GetComponent.<Rigidbody2D>().velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 	}
 	else{
-		if(name == "leftwallcollider" && collideObject.rigidbody2D.velocity.x < 0){
-			collideObject.rigidbody2D.velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
+		if(name == "leftwallcollider" && collideObject.GetComponent.<Rigidbody2D>().velocity.x < 0){
+			collideObject.GetComponent.<Rigidbody2D>().velocity.x = -GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
-		else if(name == "rightwallcollider" && collideObject.rigidbody2D.velocity.x > 0){
-			collideObject.rigidbody2D.velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
+		else if(name == "rightwallcollider" && collideObject.GetComponent.<Rigidbody2D>().velocity.x > 0){
+			collideObject.GetComponent.<Rigidbody2D>().velocity.x = GameStart.enemyMovementSpeed * GameMaster.zigZagSpeedModifier;
 		}
 	}
 }

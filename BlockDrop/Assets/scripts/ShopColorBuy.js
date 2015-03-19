@@ -27,7 +27,7 @@ function Update(){
 							if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalColorPrice){
 									
 								//Change rotating object
-								rotatingEnemy.renderer.material.color.a = 1;
+								rotatingEnemy.GetComponent.<Renderer>().material.color.a = 1;
 								rotatingEnemy.transform.FindChild("Locked").gameObject.SetActive(false);
 								
 								buyButton.SetActive(false);
@@ -45,8 +45,8 @@ function Update(){
 								shopUnlock.checkEnoughMoney();
 								
 								var boughtColor : GameObject = GameObject.Find(shopColorName);
-								boughtColor.renderer.material.color.a = 1;
-								EditorPrefsX.SetColor("enemyColor", boughtColor.renderer.material.color);
+								boughtColor.GetComponent.<Renderer>().material.color.a = 1;
+								EditorPrefsX.SetColor("enemyColor", boughtColor.GetComponent.<Renderer>().material.color);
 							}
 						}
 					break;

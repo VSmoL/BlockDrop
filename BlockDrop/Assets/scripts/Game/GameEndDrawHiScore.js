@@ -4,14 +4,14 @@ function Start () {
 
 	var gameMode : String = GameMaster.gameMode + "_" + GameMaster.stageNumber.ToString();
 
-	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/15;
+	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/15;
 	for(var childText : Transform in transform){
-		childText.GetComponent(GUIText).fontSize = transform.guiText.fontSize;
+		childText.GetComponent(GUIText).fontSize = transform.GetComponent.<GUIText>().fontSize;
 	}
 
-	guiText.text = PlayerPrefs.GetInt("HiScore_"+gameMode).ToString();
+	GetComponent.<GUIText>().text = PlayerPrefs.GetInt("HiScore_"+gameMode).ToString();
 	for(var childText : Transform in transform){
-		childText.GetComponent(GUIText).text = guiText.text;
+		childText.GetComponent(GUIText).text = GetComponent.<GUIText>().text;
 	}
 
 }

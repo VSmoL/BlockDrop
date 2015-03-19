@@ -27,7 +27,7 @@ function Update(){
 							if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalColorPrice){
 									
 								//Change rotating object
-								rotatingEnemy.renderer.material.color.a = 1;
+								rotatingEnemy.GetComponent.<Renderer>().material.color.a = 1;
 								rotatingEnemy.transform.FindChild("Locked").gameObject.SetActive(false);
 								
 								buyButton.SetActive(false);
@@ -45,7 +45,7 @@ function Update(){
 								shopUnlock.checkEnoughMoney();
 								
 								var boughtShape : GameObject = GameObject.Find(shopShapeName);
-								boughtShape.renderer.material.color.a = 1;
+								boughtShape.GetComponent.<Renderer>().material.color.a = 1;
 								PlayerPrefs.SetInt("enemyBlockSpriteIndex", boughtShape.GetComponent(ShopShapeId).ShapeId);
 							}
 						}

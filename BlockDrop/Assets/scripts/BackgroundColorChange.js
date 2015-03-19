@@ -13,7 +13,7 @@ function Start () {
 	if (bgColor == null || bgColor.Length < 2){
 		Debug.Log ("Need to setup colors array in inspector");
 	}
-	renderer.material.color = GameMaster.backgroundColor;
+	GetComponent.<Renderer>().material.color = GameMaster.backgroundColor;
 	
 	nextIndex = (GameMaster.backgroundIndex + 1) % bgColor.Length;  
 }
@@ -27,8 +27,8 @@ function Update(){
 		GameMaster.backgroundTimer = 0.0;
 
 	}
-	 renderer.material.color = Color.Lerp (bgColor[GameMaster.backgroundIndex], bgColor[nextIndex], GameMaster.backgroundTimer / duration );
-	 GameMaster.backgroundColor = renderer.material.color;
+	 GetComponent.<Renderer>().material.color = Color.Lerp (bgColor[GameMaster.backgroundIndex], bgColor[nextIndex], GameMaster.backgroundTimer / duration );
+	 GameMaster.backgroundColor = GetComponent.<Renderer>().material.color;
 }
 
 

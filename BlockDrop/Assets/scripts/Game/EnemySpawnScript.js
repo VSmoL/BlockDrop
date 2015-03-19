@@ -4,6 +4,9 @@
 public var enemy : GameObject;
 public var bottomSpawn : GameObject;
 public var bottomEnemy : GameObject;
+public var ExtraSpawn : GameExtraSpawnScript;
+public var BombSpawn : GameBombSpawnScript;
+
 var spawnX1 : float;
 var spawnX2 : float;
 var spawnBottomX1 : float;
@@ -18,10 +21,21 @@ function startSpawn(){
 		getBottomSpawnArea();
 		addEnemy();
 	}
+	else if(GameMaster.Scoreattack){
+		getSpawnArea();
+		getBottomSpawnArea();
+		addEnemy();
+		ExtraSpawn.startSpawn();
+		BombSpawn.startSpawn();
+		InvokeRepeating("increaseSpawnRate", 1, 1);
+		InvokeRepeating("increaseMovementSpeed", 1, 1);
+		InvokeRepeating("decreaseEnemySize", 1, 1);
+	}
 	else{
 		getSpawnArea();
 		getBottomSpawnArea();
 		addEnemy();
+		BombSpawn.startSpawn();
 		InvokeRepeating("increaseSpawnRate", 1, 1);
 		InvokeRepeating("increaseMovementSpeed", 1, 1);
 		InvokeRepeating("decreaseEnemySize", 1, 1);
@@ -97,11 +111,11 @@ function spawnEnemy(){
 
 function getSpawnArea(){
 	// Variables to store the X position of the spawn object
-   	spawnX1 = transform.position.x - renderer.bounds.size.x/2;
-    spawnX2 = transform.position.x + renderer.bounds.size.x/2;
+   	spawnX1 = transform.position.x - GetComponent.<Renderer>().bounds.size.x/2;
+    spawnX2 = transform.position.x + GetComponent.<Renderer>().bounds.size.x/2;
 }
 function getBottomSpawnArea(){
 	// Variables to store the X position of the spawn object
-   	spawnBottomX1 = bottomSpawn.transform.position.x - renderer.bounds.size.x/2;
-    spawnBottomX2 = bottomSpawn.transform.position.x + renderer.bounds.size.x/2;
+   	spawnBottomX1 = bottomSpawn.transform.position.x - GetComponent.<Renderer>().bounds.size.x/2;
+    spawnBottomX2 = bottomSpawn.transform.position.x + GetComponent.<Renderer>().bounds.size.x/2;
 }

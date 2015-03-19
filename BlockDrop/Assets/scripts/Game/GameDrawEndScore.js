@@ -1,26 +1,26 @@
 ﻿#pragma strict
 
-public var endGameCoinsEarned : GameObject;
+public var endGameCoinTotal : GameObject;
 public var endGameCoinIcon : GameObject;
-public var endGameTotalCoin : GameObject;
+public var endGameCoinsEarned : GameObject;
 public var endGameHighScore : GameObject;
 
 function Start(){
-	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/14;
+	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/14;
 	
 	for(var childText : Transform in transform){
-		childText.gameObject.GetComponent(GUIText).fontSize = transform.guiText.fontSize;
+		childText.gameObject.GetComponent(GUIText).fontSize = transform.GetComponent.<GUIText>().fontSize;
 	}
 	
-	while(GameMaster.endScore > parseInt(guiText.text)){
-		guiText.text = ((parseInt(guiText.text)) + Mathf.Ceil((GameMaster.endScore * 0.01))).ToString();
+	while(GameMaster.endScore > parseInt(GetComponent.<GUIText>().text)){
+		GetComponent.<GUIText>().text = ((parseInt(GetComponent.<GUIText>().text)) + Mathf.Ceil((GameMaster.endScore * 0.01))).ToString();
 		for(var childText : Transform in transform){
-			childText.gameObject.GetComponent(GUIText).text = guiText.text;
+			childText.gameObject.GetComponent(GUIText).text = GetComponent.<GUIText>().text;
 		}
-		if(parseInt(guiText.text) >= GameMaster.endScore){
-			guiText.text = GameMaster.endScore.ToString();
+		if(parseInt(GetComponent.<GUIText>().text) >= GameMaster.endScore){
+			GetComponent.<GUIText>().text = GameMaster.endScore.ToString();
 			for(var childText : Transform in transform){
-				childText.gameObject.GetComponent(GUIText).text = guiText.text;
+				childText.gameObject.GetComponent(GUIText).text = GetComponent.<GUIText>().text;
 			}
 			showMultiplier();
 		}
@@ -33,9 +33,9 @@ function Start(){
 
 function showMultiplier(){
 	yield WaitForSeconds(1);
-	endGameCoinsEarned.SetActive(true);
+	endGameCoinTotal.SetActive(true);
 	endGameCoinIcon.SetActive(true);
-	endGameTotalCoin.SetActive(true);
+	endGameCoinsEarned.SetActive(true);
 	if (GameMaster.HiScore){
 		endGameHighScore.SetActive(true);
 	}

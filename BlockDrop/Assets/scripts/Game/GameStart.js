@@ -5,6 +5,7 @@ static var enemySpawnRate : float;
 static var enemySizeX : float;
 static var enemySizeY : float;
 public var score : GUIText;
+public var scanner : GameObject;
 
 var enemySpawn : EnemySpawnScript;
 
@@ -38,6 +39,10 @@ function startCountDown(){
     yield WaitForSeconds (1.0);
  
     countdown.enabled = false; 
+    
+    if(GameMaster.gameScanner){
+		scanner.SetActive(true);
+	}
     
     enemySpawn.startSpawn();
 }

@@ -13,6 +13,9 @@ static var multiplyScore = 0;
 static var multiplier = 0;
 static var previousBest : int = 0;
 
+//BonusEffect
+static var bonusText : String;
+
 //Coins
 static var endGameGoldCoins = 0;
 
@@ -32,7 +35,7 @@ static var LastScreenName = "";
 //GameMode
 static var gameMode : String;
 static var StageMode = false;
-static var CustomMode = false;
+static var Scoreattack = false;
 static var RandomMode = false;
 
 //StageSelect
@@ -61,6 +64,10 @@ static var gameTopBottom : boolean = false;
 static var gameFade : boolean = false;
 //SwapPlace
 static var gameSwapPlace : boolean = false;
+//Bomb
+static var gameBomb : boolean = false;
+//Scanner
+static var gameScanner : boolean = false;
 
 //Random Game Mode Values
 //Random SpawnRate

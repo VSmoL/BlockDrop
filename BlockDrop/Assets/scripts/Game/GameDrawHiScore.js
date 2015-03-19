@@ -4,10 +4,10 @@ var bgColor : Color[] = [Color(1,0.5,0.5,0.75), Color(1,0.75,0.5,0.75), Color(1,
 private var fadeAmount : float = 1;
 
 function Start () {
-	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/12;
+	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/10;
 	
 	for(var childText : Transform in transform){
-		childText.GetComponent(GUIText).fontSize = transform.guiText.fontSize;
+		childText.GetComponent(GUIText).fontSize = transform.GetComponent.<GUIText>().fontSize;
 	}
 	
 	InvokeRepeating("changeColor",0,0.1);
@@ -28,5 +28,5 @@ function Start () {
 }
 
 function changeColor(){
-	transform.guiText.color = Color.Lerp (bgColor[Random.Range(0,bgColor.Length)], bgColor[Random.Range(0,bgColor.Length)], 3);
+	transform.GetComponent.<GUIText>().color = Color.Lerp (bgColor[Random.Range(0,bgColor.Length)], bgColor[Random.Range(0,bgColor.Length)], 3);
 }

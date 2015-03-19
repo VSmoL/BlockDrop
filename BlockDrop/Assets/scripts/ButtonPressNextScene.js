@@ -39,52 +39,31 @@ function Update(){
 					//Mode select Buttons
 					case "ArcadeButton":
 						GameMaster.StageMode = true;
-						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = false;
+						GameMaster.Scoreattack = false;
 						GameMaster.gameMode = "Arcade";
 						Application.LoadLevel("StageSelect");
 						break;
 					case "RandomButton":
 						//Tell which mode
 						GameMaster.StageMode = false;
-						GameMaster.CustomMode = false;
 						GameMaster.RandomMode = true;
+						GameMaster.Scoreattack = false;
 						GameMaster.gameMode = "Random";
 						Application.LoadLevel("Game");
 						break;
-					case "SurvivalButton":
+					case "ScoreAttackButton":
 						//Tell which mode
 						GameMaster.StageMode = false;
-						GameMaster.CustomMode = false;
-						GameMaster.RandomMode = true;
+						GameMaster.RandomMode = false;
+						GameMaster.Scoreattack = true;
 						GameMaster.gameMode = "Survival";
 						Application.LoadLevel("Game");
-						break;
-						
-					//Zone select Buttons
-					case "ZoneBackButton":
-						GameMaster.StageMode = true;
-						GameMaster.CustomMode = false;
-						GameMaster.RandomMode = false;
-						Application.LoadLevel("ModeSelect");
 						break;
 					
 					//Stage select buttons
 					case "StageBackButton":
-						GameMaster.StageMode = true;
-						GameMaster.CustomMode = false;
-						GameMaster.RandomMode = false;
 						Application.LoadLevel("ModeSelect");
-						break;
-					
-					case "RandomButton":
-						//Tell which mode
-						GameMaster.StageMode = false;
-						GameMaster.CustomMode = false;
-						GameMaster.RandomMode = true;
-						Application.LoadLevel("Game");
-						break;
-					case "CustomButton":
 						break;
 						
 					//Game Buttons
@@ -94,6 +73,8 @@ function Update(){
 						GameMaster.gameTopBottom = false;
 						GameMaster.gameFade = false;
 						GameMaster.gameSwapPlace = false;
+						GameMaster.gameBomb = false;
+						GameMaster.gameScanner = false;
 						
 						Application.LoadLevel("MainMenu");
 						break;

@@ -18,15 +18,15 @@ public function checkUnlocks () {
 		for (var childColor : Transform in child){
 			//Check if color is unlocke
 			if (!EditorPrefsX.GetBool("Unlocked"+childColor.name)){
-				childColor.renderer.material.color = blockColors[x];
-				childColor.renderer.material.color.a = 0.5;
+				childColor.GetComponent.<Renderer>().material.color = blockColors[x];
+				childColor.GetComponent.<Renderer>().material.color.a = 0.5;
 				for (var locked : Transform in childColor){
 					locked.gameObject.SetActive(true);
 				}
 			}
 			else if (EditorPrefsX.GetBool("Unlocked"+childColor.name)){
-				childColor.renderer.material.color = blockColors[x];
-				childColor.renderer.material.color.a = 1;
+				childColor.GetComponent.<Renderer>().material.color = blockColors[x];
+				childColor.GetComponent.<Renderer>().material.color.a = 1;
 				for (var locked : Transform in childColor){
 					locked.gameObject.SetActive(false);
 				}
@@ -38,11 +38,11 @@ public function checkUnlocks () {
 
 public function checkEnoughMoney () {
 	if(PlayerPrefs.GetInt("TotalGoldBlock") < ShopPrice.normalColorPrice){
-		buyButton.renderer.material.color.a = 0.5;
-		buyButton.collider2D.enabled = false;
+		buyButton.GetComponent.<Renderer>().material.color.a = 0.5;
+		buyButton.GetComponent.<Collider2D>().enabled = false;
 	}
 	else if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalColorPrice){
-		buyButton.renderer.material.color.a = 1;
-		buyButton.collider2D.enabled = true;
+		buyButton.GetComponent.<Renderer>().material.color.a = 1;
+		buyButton.GetComponent.<Collider2D>().enabled = true;
 	}
 }

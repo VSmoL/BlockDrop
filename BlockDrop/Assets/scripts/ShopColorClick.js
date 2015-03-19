@@ -7,7 +7,7 @@ public var currencyGold : GameObject;
 public var selectedText : GameObject;
 
 function Start(){
-	rotatingEnemy.renderer.material.color = EditorPrefsX.GetColor("enemyColor");
+	rotatingEnemy.GetComponent.<Renderer>().material.color = EditorPrefsX.GetColor("enemyColor");
 }
 
 function Update () {
@@ -23,7 +23,7 @@ function Update () {
 		if(GameMaster.mousePressDown == hitObjectUp){	
 			if (hitObjectUp.tag == "Color"){
 				//Add color to big enemy object
-				rotatingEnemy.renderer.material.color = hitObjectUp.renderer.material.color;
+				rotatingEnemy.GetComponent.<Renderer>().material.color = hitObjectUp.GetComponent.<Renderer>().material.color;
 					
 				//Check is color unlocked
 				if (!EditorPrefsX.GetBool("Unlocked"+hitObjectUp.name)){
@@ -36,7 +36,7 @@ function Update () {
 					selectedText.SetActive(false);
 				}
 				else if (EditorPrefsX.GetBool("Unlocked"+hitObjectUp.name)){
-					EditorPrefsX.SetColor("enemyColor", hitObjectUp.renderer.material.color);
+					EditorPrefsX.SetColor("enemyColor", hitObjectUp.GetComponent.<Renderer>().material.color);
 					rotatingEnemy.transform.FindChild("Locked").gameObject.SetActive(false);
 					buyButton.SetActive(false);
 					colorPrice.SetActive(false);

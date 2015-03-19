@@ -54,15 +54,15 @@ function GameOver(){
 }
 
 function fadeScore(){
-	while(score.guiText.color.a  > 0){
-		score.guiText.color.a -= 0.05;
+	while(score.GetComponent.<GUIText>().color.a  > 0){
+		score.GetComponent.<GUIText>().color.a -= 0.05;
 		for(var text : Transform in score.transform){
-			text.gameObject.guiText.color.a -= 0.05;
+			text.gameObject.GetComponent.<GUIText>().color.a -= 0.05;
 		}
 		yield WaitForSeconds(0.01);
 	}
-	score.guiText.color.a = 0.0;
+	score.GetComponent.<GUIText>().color.a = 0.0;
 	for(var text : Transform in score.transform){
-		text.gameObject.guiText.color.a -= 0.0;
+		text.gameObject.GetComponent.<GUIText>().color.a -= 0.0;
 	}
 }

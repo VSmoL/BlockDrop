@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
 function Start () {
-	guiText.fontSize = Mathf.Min(Screen.height,Screen.width)/10;
-	guiText.text = ShopPrice.normalColorPrice.ToString();
+	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/10;
+	GetComponent.<GUIText>().text = ShopPrice.normalColorPrice.ToString();
 }

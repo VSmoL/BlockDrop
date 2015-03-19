@@ -1,5 +1,5 @@
 ﻿#pragma strict
 
 function Start () {
-	renderer.material.color = EditorPrefsX.GetColor("enemyColor");
+	GetComponent.<Renderer>().material.color = EditorPrefsX.GetColor("enemyColor");
 }
