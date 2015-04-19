@@ -54,6 +54,7 @@
      <Compile Include="Assets\scripts\DeletePlayerPref.js" />
      <Compile Include="Assets\scripts\DrawShopPrice.js" />
      <Compile Include="Assets\scripts\DrawShopSelected.js" />
+     <Compile Include="Assets\scripts\DrawShopShapePrice.js" />
      <Compile Include="Assets\scripts\EditorPrefsX.js" />
      <Compile Include="Assets\scripts\EndScreenFadeOut.js" />
      <Compile Include="Assets\scripts\FirstTimeGameStartSettings.js" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\scripts\Game\GameEndDrawTotalBlocks.js" />
      <Compile Include="Assets\scripts\Game\GameExtraSpawnScript.js" />
      <Compile Include="Assets\scripts\Game\GameOverTextAnimation.js" />
+     <Compile Include="Assets\scripts\Game\GamePause.js" />
      <Compile Include="Assets\scripts\Game\GameScreenPressEffect.js" />
      <Compile Include="Assets\scripts\Game\GameStart.js" />
      <Compile Include="Assets\scripts\Game\GameZigZag.js" />

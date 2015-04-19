@@ -2,8 +2,6 @@
 
 function Start(){
 
-	Debug.Log("toimii");
-
 	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/20;
 
 	for(var childText : Transform in transform){
@@ -25,6 +23,4 @@ function Start(){
 		}
 		yield WaitForSeconds(0.01);
 	}
-		
-	Debug.Log("toimii");
 }

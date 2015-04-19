@@ -2,6 +2,7 @@
 
 //GameOver
 static var GameOver = false;
+static var GamePause = false;
 static var HiScore = false;
 
 //Score
@@ -59,7 +60,7 @@ static var shredderMax : int = 4;
 //MoveStop
 static var gameMoveStop : boolean = false;
 //UpDown
-static var gameTopBottom : boolean = false;
+static var gameTopBottom : boolean = true;
 //UpDown
 static var gameFade : boolean = false;
 //SwapPlace

@@ -9,6 +9,8 @@ public var shapePrice : GameObject;
 public var currencyGold : GameObject;
 public var selectedText : GameObject;
 
+public var totalGold : MenuDrawGoldBlock;
+
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
 		var hit : RaycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -24,7 +26,7 @@ function Update(){
 					case "ShopShapeBuyButton":
 						shopShapeName = GameMaster.shopShapeName;
 						if (!EditorPrefsX.GetBool("Unlocked"+shopShapeName)){
-							if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalColorPrice){
+							if(PlayerPrefs.GetInt("TotalGoldBlock") >= ShopPrice.normalShapePrice){
 									
 								//Change rotating object
 								rotatingEnemy.GetComponent.<Renderer>().material.color.a = 1;
@@ -36,7 +38,7 @@ function Update(){
 								selectedText.SetActive(true);
 								
 								//Reduce total goldblocks
-								PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") - ShopPrice.normalColorPrice);
+								PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") - ShopPrice.normalShapePrice);
 								
 								//Save bought shape
 								EditorPrefsX.SetBool("Unlocked"+shopShapeName, true);
@@ -47,6 +49,8 @@ function Update(){
 								var boughtShape : GameObject = GameObject.Find(shopShapeName);
 								boughtShape.GetComponent.<Renderer>().material.color.a = 1;
 								PlayerPrefs.SetInt("enemyBlockSpriteIndex", boughtShape.GetComponent(ShopShapeId).ShapeId);
+								
+								totalGold.refreshTotalGold();
 							}
 						}
 					break;

@@ -69,13 +69,18 @@ function Update(){
 				gameEnd.GameOver();
 				Destroy(hitObject.gameObject);
 				break;						
-																								
+					
+			case "PauseButton":
+				break;
+			case "ContinueButton":
+				break;		
+																																																																																																																								
 			default:
 				GameMaster.multiplier = 0;
 				
 				//spawn particle
 				pressEffect.GetComponent(ParticleSystem).startColor = Color(1,0,0,1);
-				if(!GameMaster.GameOver){
+				if(!GameMaster.GameOver && !GameMaster.GamePause){
 					Instantiate(pressEffect, mousePos, Quaternion.identity);
 				}
 

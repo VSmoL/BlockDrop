@@ -9,6 +9,8 @@ public var colorPrice : GameObject;
 public var currencyGold : GameObject;
 public var selectedText : GameObject;
 
+public var totalGold : MenuDrawGoldBlock;
+
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
 		var hit : RaycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -47,6 +49,8 @@ function Update(){
 								var boughtColor : GameObject = GameObject.Find(shopColorName);
 								boughtColor.GetComponent.<Renderer>().material.color.a = 1;
 								EditorPrefsX.SetColor("enemyColor", boughtColor.GetComponent.<Renderer>().material.color);
+								
+								totalGold.refreshTotalGold();
 							}
 						}
 					break;

@@ -76,9 +76,11 @@ function Update(){
 						GameMaster.gameBomb = false;
 						GameMaster.gameScanner = false;
 						
+						Time.timeScale = 1;
 						Application.LoadLevel("MainMenu");
 						break;
 					case "RestartButton":
+						Time.timeScale = 1;
 						Application.LoadLevel("Game");
 						break;
 

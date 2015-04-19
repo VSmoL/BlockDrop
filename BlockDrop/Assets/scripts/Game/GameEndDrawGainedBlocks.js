@@ -11,6 +11,7 @@ function Start(){
 
 	for(var childText : Transform in endGameTotalCoin.transform){
 		childText.GetComponent(GUIText).text = endGameTotalCoin.transform.GetComponent.<GUIText>().text;
+		childText.GetComponent(GUIText).fontSize = endGameTotalCoin.transform.GetComponent.<GUIText>().fontSize;
 	}
 
 	for(var childText : Transform in transform){

@@ -2,6 +2,7 @@
 
 public var popupbackground : GameObject;
 public var score : GameObject;
+public var pause : GameObject;
 
 function OnTriggerExit2D(obj : Collider2D) {  
     var collideObject = obj.gameObject;
@@ -11,13 +12,7 @@ function OnTriggerExit2D(obj : Collider2D) {
 		case "Enemy(Clone)":
 			Destroy(collideObject);
 			if(!GameMaster.GameOver){
-				
-				GameMaster.GameOver = true;
-				Destroy(GameObject.Find(collideObject.name).gameObject);
-//				Time.timeScale = 0.5;
-//				yield WaitForSeconds(1);
-//				Time.timeScale = 1;
-		    	fadeScore();
+				Destroy(collideObject);
 				GameOver();
 			}
 			break;
@@ -28,6 +23,9 @@ function OnTriggerExit2D(obj : Collider2D) {
 }
 
 function GameOver(){
+	fadeScore();
+	fadePauseButton();
+
 	popupbackground.SetActive(true);
 	GameMaster.endScore = GameMaster.currentScore;
 	//GameMaster.endMultipliedScore = Mathf.Ceil(GameMaster.endScore * GameMaster.endMultiplier);	
@@ -64,5 +62,11 @@ function fadeScore(){
 	score.GetComponent.<GUIText>().color.a = 0.0;
 	for(var text : Transform in score.transform){
 		text.gameObject.GetComponent.<GUIText>().color.a -= 0.0;
+	}
+}
+function fadePauseButton(){
+	while(pause.GetComponent.<SpriteRenderer>().color.a  > 0){
+		pause.GetComponent.<SpriteRenderer>().color.a -= 0.05;
+		yield WaitForSeconds(0.01);
 	}
 }

@@ -1,30 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\EnemyMovementScirpt.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Game\EnemyDestroy.js">
     <Files>
-      <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="30" Column="16" />
-      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="33" Column="3" />
-      <File FileName="Assets\scripts\Game\GameDrawBonusText.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ShopShapeCheckUnlocked.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemyFragmentAddForce.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\ScalePopUpWindow.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\fontSize.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawEndScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawHiScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameMaster.js" Line="70" Column="42" />
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="77" Column="37" />
-      <File FileName="Assets\scripts\Game\GameExtraSpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\StageSelectNextScene.js" Line="27" Column="37" />
-      <File FileName="Assets\scripts\Game\GameBombSpawnScript.js" Line="27" Column="2" />
-      <File FileName="Assets\scripts\Game\ScannerMovement.js" Line="19" Column="32" />
-      <File FileName="Assets\scripts\Game\GameStart.js" Line="43" Column="5" />
+      <File FileName="Assets\scripts\GameMaster.js" Line="5" Column="21" />
+      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameBombSpawnScript.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\GameEnd.js" Line="69" Column="8" />
+      <File FileName="Assets\scripts\Game\GameExtraSpawnScript.js" Line="27" Column="29" />
+      <File FileName="Assets\scripts\Game\ScannerMovement.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="76" Column="12" />
+      <File FileName="Assets\scripts\Game\GamePause.js" Line="22" Column="7" />
+      <File FileName="Assets\scripts\Game\GameStart.js" Line="10" Column="17" />
+      <File FileName="Assets\scripts\Game\GameOverTextAnimation.js" Line="14" Column="4" />
+      <File FileName="Assets\scripts\Game\GameEndBottom.js" Line="12" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\GameExtraSpawnScript.js" line="32" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\GameEnd.js" line="29" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\BlockDropClone\BlockDrop\Assets\scripts\Game\EnemyDestroy.js" line="79" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

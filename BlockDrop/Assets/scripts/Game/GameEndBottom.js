@@ -8,8 +8,10 @@ function OnTriggerExit2D(obj : Collider2D) {
 	// Ends game if 'enemy' collides 'bottomheader'
 	switch(collideObject.name){		
 		case "EnemyBottom(Clone)":
-	    	Destroy(collideObject);
-			GameEnd.GameOver();
+			if(!GameMaster.GameOver){
+		    	Destroy(collideObject);
+				GameEnd.GameOver();
+			}
 			break;
 	}
 }
