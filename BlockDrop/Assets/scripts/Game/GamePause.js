@@ -1,6 +1,8 @@
 ﻿#pragma strict
 
 public var PausePopUp : GameObject;
+private var allAudioSources : AudioSource[];
+private var bgMusic : GameObject;
 
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
@@ -15,11 +17,22 @@ function Update(){
 				switch(hitObjectUp.name){	
 					case "PauseButton":
 						Time.timeScale = 0;
+						
+						bgMusic = GameObject.Find("BackgroundMusic");
+    					bgMusic.GetComponent(AudioSource).Pause();
+    
+					    
 						PausePopUp.SetActive(true);
 						GameMaster.GamePause = true;
 						break;
 					case "ContinueButton":
 						Time.timeScale = 1;
+						
+						if(EditorPrefsX.GetBool("isMusic")){
+							bgMusic = GameObject.Find("BackgroundMusic");
+    						bgMusic.GetComponent(AudioSource).Play();
+    					}
+						
 						PausePopUp.SetActive(false);
 						GameMaster.GamePause = false;
 						break;

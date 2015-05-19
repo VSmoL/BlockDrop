@@ -10,9 +10,12 @@ function OnTriggerExit2D(obj : Collider2D) {
 	// Ends game if 'enemy' collides 'bottomheader'
 	switch(collideObject.name){		
 		case "Enemy(Clone)":
+		case "EnemyBoss(Clone)":
 			Destroy(collideObject);
 			if(!GameMaster.GameOver){
+				GetComponent(AudioSource).Play();
 				Destroy(collideObject);
+				fadeMusic();
 				GameOver();
 			}
 			break;
@@ -49,6 +52,15 @@ function GameOver(){
 	//Save data
 	PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") + GameMaster.endGameGoldCoins);
 	
+}
+
+function fadeMusic(){
+	var bgMusic = GameObject.Find("BackgroundMusic");
+    
+	while (bgMusic.GetComponent(AudioSource).volume > 0){
+		bgMusic.GetComponent(AudioSource).volume -= 0.01;
+		yield WaitForSeconds(0.01);
+	}
 }
 
 function fadeScore(){

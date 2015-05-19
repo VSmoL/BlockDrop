@@ -27,7 +27,6 @@ function addExtra() {
 	while (!GameMaster.GameOver){
 	
 	var time = Random.Range(minWaitTime, maxWaitTime);
-	yield WaitForSeconds (1);
 	
 		if(GameMaster.gameTopBottom){
 			var TopBottom = Random.Range(0,2);

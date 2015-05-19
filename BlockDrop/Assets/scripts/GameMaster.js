@@ -22,13 +22,13 @@ static var endGameGoldCoins = 0;
 
 //EnemyAttributes
 static var enemySpawnRate : float = 1.0;
-static var enemySpawnRateIncrease : float = 0.015;
+static var enemySpawnRateIncrease : float = 0.01;
 
 static var enemyMovementSpeed : float = -3.0;
-static var enemyMovementSpeedIncrease : float = 0.015;
+static var enemyMovementSpeedIncrease : float = 0.005;
 
 static var enemySize : float = 0.5;
-static var enemySizeIncrease : float = 0.01;
+static var enemySizeIncrease : float = 0.005;
 
 //LastScreen
 static var LastScreenName = "";
@@ -51,16 +51,10 @@ static var enemySizeArray = [0.5, 0.476, 0.433, 0.4, 0.376, 0.333, 0.3, 0.276, 0
 static var gameZigZag : boolean = false;
 static var zigZagSpeedModifier : float = 0.75;
 
-//Shredder
-static var gameShredder : boolean = false;
-static var shredderMultiplySpawn : int;
-static var shredderMin : int = 1;
-static var shredderMax : int = 4;
-
 //MoveStop
 static var gameMoveStop : boolean = false;
 //UpDown
-static var gameTopBottom : boolean = true;
+static var gameTopBottom : boolean = false;
 //UpDown
 static var gameFade : boolean = false;
 //SwapPlace
@@ -69,6 +63,10 @@ static var gameSwapPlace : boolean = false;
 static var gameBomb : boolean = false;
 //Scanner
 static var gameScanner : boolean = false;
+//Double
+static var gameDouble : boolean = false;
+//Boss
+static var gameBoss : boolean = false;
 
 //Random Game Mode Values
 //Random SpawnRate
@@ -89,6 +87,12 @@ static var mousePressDownObjectScale;
 static var backgroundIndex : int;
 static var backgroundColor : Color;
 static var backgroundTimer : float = 0.0;
+static var backgroundMusic : int;
+
+
+//Settings
+static var isMusic : boolean = EditorPrefsX.GetBool("isMusic");
+static var isSfx : boolean = EditorPrefsX.GetBool("isSfx");
 
 //Shop
 //ShopColor

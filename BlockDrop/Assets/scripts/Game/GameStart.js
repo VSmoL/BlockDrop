@@ -19,6 +19,11 @@ function Start () {
 	enemySpawnRate = GameMaster.enemySpawnRate;
 	enemySizeY = enemySizeX = GameMaster.enemySize;
     
+    if(EditorPrefsX.GetBool("isMusic")){
+    	var bgMusic = GameObject.Find("BackgroundMusic");
+    	bgMusic.GetComponent(AudioSource).Pause();
+    }
+    
     while(countDownTime > 0){
 		while(countDown.GetComponent.<GUIText>().color.a > 0){
 		
@@ -30,7 +35,7 @@ function Start () {
 			for(var childText : Transform in countDown.transform){
 				childText.gameObject.GetComponent(GUIText).color.a = countDown.GetComponent(GUIText).color.a;
 //				childText.gameObject.GetComponent(GUIText).fontSize = countDown.GetComponent(GUIText).fontSize;
-				childText.gameObject.GetComponent(GUIText).text = countDown.GetComponent.<GUIText>().text;
+				childText.gameObject.GetComponent(GUIText).text = countDown.GetComponent(GUIText).text;
 			}
 			yield WaitForSeconds(0.01);
 		}
@@ -44,6 +49,9 @@ function Start () {
 	
 	GameMaster.GameOver = false;
 	startCountDown();
+	if(EditorPrefsX.GetBool("isMusic")){
+		bgMusic.GetComponent(PlayRandomSong).startMusic();
+	}
 }
 
 function startCountDown(){

@@ -2,6 +2,7 @@
 
 // Variable to store the enemy prefab
 public var enemy : GameObject;
+public var enemyBoss : GameObject;
 public var bottomSpawn : GameObject;
 public var bottomEnemy : GameObject;
 public var ExtraSpawn : GameExtraSpawnScript;
@@ -12,6 +13,8 @@ var spawnX2 : float;
 var spawnBottomX1 : float;
 var spawnBottomX2 : float;
 var spawnPoint;
+var doubleChance : float;
+var enemySpawned : float;
 
 
 function startSpawn(){
@@ -73,17 +76,7 @@ function addRandomValues(){
 }
 
 function spawnEnemy(){
-	if (GameMaster.gameShredder){
-		GameMaster.shredderMultiplySpawn = Random.Range(GameMaster.shredderMin, GameMaster.shredderMax);
-		for(var i=0; i <= GameMaster.shredderMultiplySpawn; i++){
-			// Randomly pick a point within the spawn object
-		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,i);
-
-		    // Create an enemy at the 'spawnPoint' position
-		    Instantiate(enemy, spawnPoint, Quaternion.identity);
-		}	
-	}
-	else if(GameMaster.gameTopBottom){
+	if(GameMaster.gameTopBottom){
 		var TopBottom = Random.Range(0,2);
 		if (TopBottom == 0){
 			// Randomly pick a point within the spawn object
@@ -100,13 +93,60 @@ function spawnEnemy(){
 	    	Instantiate(bottomEnemy, spawnPoint, Quaternion.identity);
 		}
 	}
+	else if(GameMaster.gameDouble){
+		if(doubleChance >= Random.value){
+			spawnDouble();
+			doubleChance = 0.1;
+		}
+		else{
+			doubleChance += 0.1;
+			
+			// Randomly pick a point within the spawn object
+		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+			
+		    // Create an enemy at the 'spawnPoint' position
+		    Instantiate(enemy, spawnPoint, Quaternion.identity);
+		}
+	}
+	else if (GameMaster.gameBoss && !GameMaster.Scoreattack){
+		enemySpawned += 1;
+		if(enemySpawned % 10 == 0){
+			spawnBoss();
+		}
+		else{
+			// Randomly pick a point within the spawn object
+		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+			
+		    // Create an enemy at the 'spawnPoint' position
+		    Instantiate(enemy, spawnPoint, Quaternion.identity);
+		    
+		}
+	}
 	else{
 		// Randomly pick a point within the spawn object
 	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
-
+		
 	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(enemy, spawnPoint, Quaternion.identity);
 	}
+}
+
+function spawnDouble(){
+	for(var i = 1; i <= 2; i++){
+		// Randomly pick a point within the spawn object
+	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+		
+	    // Create an enemy at the 'spawnPoint' position
+	    Instantiate(enemy, spawnPoint, Quaternion.identity);
+	}
+}
+
+function spawnBoss(){
+	// Randomly pick a point within the spawn object
+    spawnPoint = new Vector3(0, transform.position.y,1);
+	
+    // Create an enemy at the 'spawnPoint' position
+    Instantiate(enemyBoss, spawnPoint, Quaternion.identity);
 }
 
 function getSpawnArea(){

@@ -11,6 +11,11 @@ function Start () {
 		
 		PlayerPrefs.SetInt("enemyBlockSpriteIndex",0);
 		EditorPrefsX.SetBool("UnlockedBlockShape",true);
+		
+		//Sounds
+		EditorPrefsX.SetBool("isMusic",true);
+		EditorPrefsX.SetBool("isSfx",true);
 	}
-	Application.LoadLevel("MainMenu");
+	var async : AsyncOperation = Application.LoadLevelAsync ("MainMenu");
+	yield async;
 }

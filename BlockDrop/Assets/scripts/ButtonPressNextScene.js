@@ -16,8 +16,8 @@ function Update(){
 					case "StartButton":
 						Application.LoadLevel("ModeSelect");
 						break;
-					case "SettingButton":
-						Application.LoadLevel("ModeSelect");
+					case "SettingsButton":
+						Application.LoadLevel("Settings");
 						break;
 					case "ShopButton":
 						Application.LoadLevel("Shop");
@@ -57,7 +57,7 @@ function Update(){
 						GameMaster.StageMode = false;
 						GameMaster.RandomMode = false;
 						GameMaster.Scoreattack = true;
-						GameMaster.gameMode = "Survival";
+						GameMaster.gameMode = "ScoreAttack";
 						Application.LoadLevel("Game");
 						break;
 					
@@ -75,13 +75,83 @@ function Update(){
 						GameMaster.gameSwapPlace = false;
 						GameMaster.gameBomb = false;
 						GameMaster.gameScanner = false;
+						GameMaster.gameDouble = false;
+						GameMaster.gameBoss = false;
+						
+						GameMaster.currentScore = 0;
+						GameMaster.multiplyScore = 0;
+						GameMaster.multiplier = 0;	
+						
+						if(EditorPrefsX.GetBool("isMusic")){
+							var bgMusic = GameObject.Find("BackgroundMusic");
+	    					bgMusic.GetComponent(AudioSource).loop = true;
+	    					bgMusic.GetComponent(AudioSource).clip = bgMusic.GetComponent(PlayRandomSong).songList[12];
+	    					bgMusic.GetComponent(AudioSource).volume = 1;
+	    					bgMusic.GetComponent(AudioSource).Play();
+						}
+						
+						GameMaster.GamePause = false;
 						
 						Time.timeScale = 1;
 						Application.LoadLevel("MainMenu");
 						break;
 					case "RestartButton":
 						Time.timeScale = 1;
+						
+						GameMaster.currentScore = 0;
+						GameMaster.multiplyScore = 0;
+						GameMaster.multiplier = 0;	
+						
+						GameMaster.GamePause = false;
+						
 						Application.LoadLevel("Game");
+						break;
+
+					//Settings
+					case "MusicButton":
+						if(EditorPrefsX.GetBool("isMusic")){
+							EditorPrefsX.SetBool("isMusic",false);
+							hitObjectUp.gameObject.GetComponent.<Renderer>().material.color.a = 0.5;
+							bgMusic = GameObject.Find("BackgroundMusic");
+							bgMusic.GetComponent(AudioSource).Stop();
+						}
+						else{
+							EditorPrefsX.SetBool("isMusic",true);
+							hitObjectUp.gameObject.GetComponent.<Renderer>().material.color.a = 1;
+							bgMusic = GameObject.Find("BackgroundMusic");
+							bgMusic.GetComponent(AudioSource).Play();
+						}
+						break;
+					case "SfxButton":
+						if(EditorPrefsX.GetBool("isSfx")){
+							EditorPrefsX.SetBool("isSfx",false);
+							hitObjectUp.gameObject.GetComponent.<Renderer>().material.color.a = 0.5;
+						}
+						else{
+							EditorPrefsX.SetBool("isSfx",true);
+							hitObjectUp.gameObject.GetComponent.<Renderer>().material.color.a = 1;
+						}
+						break;
+					case "ClearDataButton":
+						PlayerPrefs.DeleteAll();
+						
+						//Game started first time
+						EditorPrefsX.SetBool("GameStarted",true);
+						
+						//WhiteColor unlocked
+						EditorPrefsX.SetBool("UnlockedWhiteColor",true);
+						EditorPrefsX.SetColor("enemyColor", Color.white);
+						
+						PlayerPrefs.SetInt("enemyBlockSpriteIndex",0);
+						EditorPrefsX.SetBool("UnlockedBlockShape",true);
+						
+						//Sounds
+						EditorPrefsX.SetBool("isMusic",true);
+						EditorPrefsX.SetBool("isSfx",true);
+						
+						GameObject.Find("MusicButton").GetComponent.<Renderer>().material.color.a = 1;
+						GameObject.Find("SfxButton").GetComponent.<Renderer>().material.color.a = 1;
+						
 						break;
 
 					case "BackButton":

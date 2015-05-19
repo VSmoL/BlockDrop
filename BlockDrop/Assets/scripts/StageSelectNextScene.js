@@ -55,16 +55,15 @@ function Update(){
 						GameMaster.gameScanner = true;
 						Application.LoadLevel("Game");
 						break;
+					case 8:
+						GameMaster.gameDouble = true;
+						Application.LoadLevel("Game");
+						break;
+					case 9:
+						GameMaster.gameBoss = true;
+						Application.LoadLevel("Game");
+						break;
 				}			
 			}
 		}
 }
-
-//Old stage select
-				//Vanilla stageselect	
-//					case "StageSelectStageButton"+ GameMaster.stageNumber.ToString():
-//						GameMaster.enemySpawnRate = GameMaster.enemySpawnRateArray[GameMaster.stageNumber];
-//						GameMaster.enemyMovementSpeed = GameMaster.enemyMovementSpeedArray[GameMaster.stageNumber];
-//						GameMaster.enemySize = GameMaster.enemySizeArray[GameMaster.stageNumber];
-//						Application.LoadLevel("Game");
-//					break;

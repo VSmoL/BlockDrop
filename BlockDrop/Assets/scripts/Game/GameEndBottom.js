@@ -10,6 +10,8 @@ function OnTriggerExit2D(obj : Collider2D) {
 		case "EnemyBottom(Clone)":
 			if(!GameMaster.GameOver){
 		    	Destroy(collideObject);
+		    	GetComponent(AudioSource).Play();
+		    	GameEnd.fadeMusic();
 				GameEnd.GameOver();
 			}
 			break;

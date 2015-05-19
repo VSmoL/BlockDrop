@@ -20,7 +20,7 @@ function startSpawn(){
 	addExtra();
 	getSpawnArea();
 	getBottomSpawnArea();
-};
+}
 
 // New function to spawn an enemy
 function addExtra() {
