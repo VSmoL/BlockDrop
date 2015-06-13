@@ -19,6 +19,9 @@ function OnTriggerExit2D(obj : Collider2D) {
 				GameOver();
 			}
 			break;
+		case "EnemyBad(Clone)":
+	    	Destroy(collideObject);
+			break;
 		case "ExtraEnemy(Clone)":
 	    	Destroy(collideObject);
 			break;
@@ -51,7 +54,6 @@ function GameOver(){
 	
 	//Save data
 	PlayerPrefs.SetInt("TotalGoldBlock", PlayerPrefs.GetInt("TotalGoldBlock") + GameMaster.endGameGoldCoins);
-	
 }
 
 function fadeMusic(){

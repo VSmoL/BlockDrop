@@ -130,7 +130,7 @@ function Update(){
 					Instantiate(pressEffect, mousePos, Quaternion.identity);
 				}
 				
-				if(EditorPrefsX.GetBool("isSfx") && !GameMaster.GamePause){
+				if(EditorPrefsX.GetBool("isSfx") && !GameMaster.GamePause && !GameMaster.GameOver){
 					GetComponent(AudioSource).PlayOneShot(missObjectSound, 1); 
 				}
 				

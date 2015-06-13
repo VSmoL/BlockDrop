@@ -14,6 +14,10 @@ static var multiplyScore = 0;
 static var multiplier = 0;
 static var previousBest : int = 0;
 
+//StarScores
+static var oneStarPoint : float;
+static var twoStarPoint : float;
+static var threeStarPoint : float;
 //BonusEffect
 static var bonusText : String;
 

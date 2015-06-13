@@ -6,9 +6,11 @@ public var enemyBomb : GameObject;
 public var bottomEnemyBomb : GameObject;
 public var bottomSpawn : GameObject;
 
-var minWaitTime = 3;
-var maxWaitTime = 5;
+var minWaitTime = 1.00;
+var maxWaitTime = 2.00;
 var time;
+
+var percentageValue : float;
 
 var spawnX1 : float;
 var spawnX2 : float;
@@ -26,8 +28,11 @@ function startSpawn(){
 function addExtra() {
 	while (!GameMaster.GameOver && GameMaster.gameBomb){
 	
+	percentageValue = GameMaster.enemyMovementSpeed / GameStart.enemyMovementSpeed;
+	
 	var time = Random.Range(minWaitTime, maxWaitTime);
-	yield WaitForSeconds (1);
+	Debug.Log(time*percentageValue);
+	yield WaitForSeconds (time * percentageValue);
 	
 		if(GameMaster.gameTopBottom){
 			var TopBottom = Random.Range(0,2);

@@ -16,5 +16,5 @@ function Start () {
 }
 
 function increaseScanner(){
-	transform.localScale.y += 0.05;
+	transform.localScale.y += 0.025;
 }

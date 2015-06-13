@@ -28,8 +28,8 @@ function startSpawn(){
 		getSpawnArea();
 		getBottomSpawnArea();
 		addEnemy();
-		ExtraSpawn.startSpawn();
-		BombSpawn.startSpawn();
+//		ExtraSpawn.startSpawn();
+//		BombSpawn.startSpawn();
 		InvokeRepeating("increaseSpawnRate", 1, 1);
 		InvokeRepeating("increaseMovementSpeed", 1, 1);
 		InvokeRepeating("decreaseEnemySize", 1, 1);
@@ -134,7 +134,7 @@ function spawnEnemy(){
 function spawnDouble(){
 	for(var i = 1; i <= 2; i++){
 		// Randomly pick a point within the spawn object
-	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,i);
 		
 	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(enemy, spawnPoint, Quaternion.identity);

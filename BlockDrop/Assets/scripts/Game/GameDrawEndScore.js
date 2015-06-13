@@ -4,6 +4,9 @@ public var endGameCoinTotal : GameObject;
 public var endGameCoinIcon : GameObject;
 public var endGameCoinsEarned : GameObject;
 public var endGameHighScore : GameObject;
+public var oneStar : GameObject;
+public var twoStar : GameObject;
+public var threeStar : GameObject;
 
 function Start(){
 	GetComponent.<GUIText>().fontSize = Mathf.Min(Screen.height,Screen.width)/14;
@@ -17,6 +20,7 @@ function Start(){
 		for(var childText : Transform in transform){
 			childText.gameObject.GetComponent(GUIText).text = GetComponent.<GUIText>().text;
 		}
+		
 		if(parseInt(GetComponent.<GUIText>().text) >= GameMaster.endScore){
 			GetComponent.<GUIText>().text = GameMaster.endScore.ToString();
 			for(var childText : Transform in transform){
@@ -38,5 +42,23 @@ function showMultiplier(){
 	endGameCoinsEarned.SetActive(true);
 	if (GameMaster.HiScore){
 		endGameHighScore.SetActive(true);
+	}
+	if(GameMaster.endScore > GameMaster.threeStarPoint){
+		oneStar.SetActive(true);
+		yield WaitForSeconds(0.6);
+		twoStar.SetActive(true);
+		yield WaitForSeconds(0.6);
+		threeStar.SetActive(true);
+		yield WaitForSeconds(0.6);
+	}
+	else if(GameMaster.endScore > GameMaster.twoStarPoint){
+		oneStar.SetActive(true);
+		yield WaitForSeconds(0.6);
+		twoStar.SetActive(true);
+		yield WaitForSeconds(0.6);
+	}
+	else if(GameMaster.endScore > GameMaster.oneStarPoint){
+		oneStar.SetActive(true);
+		yield WaitForSeconds(0.6);
 	}
 }

@@ -1,5 +1,7 @@
 #pragma strict
 
+var bgMusic : GameObject;
+
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
 		var hit : RaycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -83,10 +85,10 @@ function Update(){
 						GameMaster.multiplier = 0;	
 						
 						if(EditorPrefsX.GetBool("isMusic")){
-							var bgMusic = GameObject.Find("BackgroundMusic");
+							bgMusic = GameObject.Find("BackgroundMusic");
 	    					bgMusic.GetComponent(AudioSource).loop = true;
-	    					bgMusic.GetComponent(AudioSource).clip = bgMusic.GetComponent(PlayRandomSong).songList[12];
-	    					bgMusic.GetComponent(AudioSource).volume = 1;
+	    					bgMusic.GetComponent(AudioSource).clip = bgMusic.GetComponent(PlayRandomSong).songList[10];
+	    					bgMusic.GetComponent(AudioSource).volume = 0.5;
 	    					bgMusic.GetComponent(AudioSource).Play();
 						}
 						
@@ -103,6 +105,13 @@ function Update(){
 						GameMaster.multiplier = 0;	
 						
 						GameMaster.GamePause = false;
+						
+						if(EditorPrefsX.GetBool("isMusic")){
+							bgMusic = GameObject.Find("BackgroundMusic");
+	    					bgMusic.GetComponent(AudioSource).loop = true;
+	    					bgMusic.GetComponent(AudioSource).volume = 0.5;
+	    					bgMusic.GetComponent(AudioSource).Play();
+						}
 						
 						Application.LoadLevel("Game");
 						break;
