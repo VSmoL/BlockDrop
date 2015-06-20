@@ -5,6 +5,9 @@ static var GameOver = false;
 static var GamePause = false;
 static var HiScore = false;
 
+//Retries
+static var GameRetries : int = 0;
+
 //Score
 static var currentScore = 0.0;
 static var endScore = 0.0;

@@ -16,6 +16,10 @@ function Update(){
 				StageSelectStageNumberScript = hitObjectUp.GetComponent("StageSelectStageNumber");
 				GameMaster.stageNumber = StageSelectStageNumberScript.stageNumber;
 						
+				GameMaster.oneStarPoint = hitObjectUp.GetComponent(StageSelectStarPoints).onePoints;
+				GameMaster.twoStarPoint = hitObjectUp.GetComponent(StageSelectStarPoints).twoPoints;
+				GameMaster.threeStarPoint = hitObjectUp.GetComponent(StageSelectStarPoints).threePoints;
+						
 				switch(GameMaster.stageNumber){
 					case 0:
 						GameMaster.gameZigZag = true;

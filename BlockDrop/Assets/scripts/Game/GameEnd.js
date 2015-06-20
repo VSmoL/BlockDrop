@@ -41,8 +41,8 @@ function GameOver(){
 	GameMaster.multiplier = 0;	
 	GameMaster.GameOver = true;
 	var gameMode : String = GameMaster.gameMode + "_" + GameMaster.stageNumber.ToString();
-	GameMaster.previousBest = 100;
 	GameMaster.previousBest = PlayerPrefs.GetInt("HiScore_"+gameMode);
+	GameMaster.GameRetries += 1;
 
 	if(GameMaster.endScore > PlayerPrefs.GetInt("HiScore_"+gameMode)){
 		PlayerPrefs.SetInt("HiScore_"+gameMode, GameMaster.endScore);

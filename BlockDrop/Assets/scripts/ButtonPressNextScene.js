@@ -24,6 +24,9 @@ function Update(){
 					case "ShopButton":
 						Application.LoadLevel("Shop");
 						break;
+					case "CreditsButton":
+						Application.LoadLevel("Credits");
+						break;
 						
 					//Shop Buttons
 					case "ColorsButton":

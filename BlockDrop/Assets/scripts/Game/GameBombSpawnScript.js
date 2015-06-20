@@ -31,7 +31,6 @@ function addExtra() {
 	percentageValue = GameMaster.enemyMovementSpeed / GameStart.enemyMovementSpeed;
 	
 	var time = Random.Range(minWaitTime, maxWaitTime);
-	Debug.Log(time*percentageValue);
 	yield WaitForSeconds (time * percentageValue);
 	
 		if(GameMaster.gameTopBottom){

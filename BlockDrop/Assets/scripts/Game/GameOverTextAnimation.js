@@ -1,5 +1,14 @@
 ﻿#pragma strict
 
+public var ScoreText : GameObject;
+public var GameEndScore : GameObject;
+public var PreviousHiScore : GameObject;
+public var GameEndPreviousBest : GameObject;
+public var RestartButton : GameObject;
+public var MainMenuButton : GameObject;
+
+public var GoogleAd : GameObject;
+
 function Start () {
 	var fontSize = 30.00;
 	while(GetComponent.<GUIText>().color.a < 1){
@@ -14,4 +23,14 @@ function Start () {
 		}
 		yield WaitForSeconds(0.01);
 	}
+	if(GameMaster.GameRetries % 2 == 0){
+		GoogleAd.SendMessage("ShowVideo");
+	}
+	
+	ScoreText.SetActive(true);
+	GameEndScore.SetActive(true);
+	PreviousHiScore.SetActive(true);
+	GameEndPreviousBest.SetActive(true);
+	RestartButton.SetActive(true);
+	MainMenuButton.SetActive(true);
 }

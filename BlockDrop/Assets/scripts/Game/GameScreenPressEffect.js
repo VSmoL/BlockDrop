@@ -16,8 +16,6 @@ function Update () {
 		
 //		pressEffect.GetComponent(ParticleSystem).startRotation = Mathf.Sin(180);
 //		//(Random.Range(0,361));
-
-		Debug.Log(hitObj.name);
 		
 		if(hitObj.name == "Enemy(Clone)"){
 			pressEffect.GetComponent(ParticleSystem).startColor = Color(0,1,0,1);
