@@ -1,8 +1,10 @@
 ﻿#pragma strict
 
 public var popupbackground : GameObject;
+public var EnemyFragmentClone : GameObject;
 public var score : GameObject;
 public var pause : GameObject;
+var enemyUnits : GameObject[];
 
 function OnTriggerExit2D(obj : Collider2D) {  
     var collideObject = obj.gameObject;
@@ -15,7 +17,6 @@ function OnTriggerExit2D(obj : Collider2D) {
 			if(!GameMaster.GameOver){
 				GetComponent(AudioSource).Play();
 				Destroy(collideObject);
-				fadeMusic();
 				GameOver();
 			}
 			break;
@@ -31,6 +32,9 @@ function OnTriggerExit2D(obj : Collider2D) {
 function GameOver(){
 	fadeScore();
 	fadePauseButton();
+	fadeMusic();
+	gameOverDestroyEnemy();
+
 
 	popupbackground.SetActive(true);
 	GameMaster.endScore = GameMaster.currentScore;
@@ -83,4 +87,21 @@ function fadePauseButton(){
 		pause.GetComponent.<SpriteRenderer>().color.a -= 0.05;
 		yield WaitForSeconds(0.01);
 	}
+}
+
+function gameOverDestroyEnemy(){
+	enemyUnits = GameObject.FindGameObjectsWithTag("Enemy");
+	for (var enemyUnit : GameObject in enemyUnits){
+		for(var d=0; d <= 3; d++){
+			EnemyFragment(enemyUnit);
+		}
+		Destroy(enemyUnit);
+	}
+}
+
+function EnemyFragment(hit : GameObject){
+
+	    var spawnPoint = hit.GetComponent.<Renderer>().bounds.center;
+
+	    Instantiate(EnemyFragmentClone, spawnPoint, Quaternion.identity);
 }

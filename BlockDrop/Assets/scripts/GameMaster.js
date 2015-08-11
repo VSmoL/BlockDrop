@@ -6,7 +6,7 @@ static var GamePause = false;
 static var HiScore = false;
 
 //Retries
-static var GameRetries : int = 0;
+static var GameRetries : int = 1;
 
 //Score
 static var currentScore = 0.0;

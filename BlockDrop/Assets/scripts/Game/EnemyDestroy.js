@@ -10,6 +10,7 @@ var countShredderPressed : int = 0;
 public var pressEffect : GameObject;
 public var hitObjectSound : AudioClip;
 public var missObjectSound : AudioClip;
+var comboCap : int;
 
 function Update(){
 		if(Input.GetMouseButtonDown(0)){
@@ -25,6 +26,11 @@ function Update(){
 			case "Enemy(Clone)":
 			case "EnemyBottom(Clone)":
 				GameMaster.multiplier += 1;
+				
+				if(GameMaster.multiplier > 10){
+					GameMaster.multiplier = 10;
+				}
+												
 				GameMaster.multiplyScore = 10 * GameMaster.multiplier;
 				GameMaster.currentScore += GameMaster.multiplyScore;
 				
@@ -86,6 +92,11 @@ function Update(){
 				else{		
 				
 					GameMaster.multiplier += 1;
+					
+					if(GameMaster.multiplier > 10){
+						GameMaster.multiplier = 10;
+					}
+					
 					GameMaster.multiplyScore = 50 * GameMaster.multiplier;
 					GameMaster.currentScore += GameMaster.multiplyScore;
 				

@@ -12,8 +12,10 @@ public class GoogleAdVideo : MonoBehaviour {
 	}
 	
 	public void hideBannerAd(){
-		GoogleAdShow.bannerView.Destroy ();
-		GoogleAdShow.bannerView = null;
+		if (GoogleAdShow.bannerView != null) {
+			GoogleAdShow.bannerView.Destroy ();
+			GoogleAdShow.bannerView = null;
+		}
 	}
 	
 	private void RequestInterstitial()

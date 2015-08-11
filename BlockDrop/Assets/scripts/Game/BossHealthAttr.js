@@ -12,6 +12,12 @@ function Start(){
 }
 
 function Update () {
+	if(GameMaster.GamePause && bossHpText.activeSelf){
+		bossHpText.SetActive(false);
+	}
+	else if(!GameMaster.GamePause && !bossHpText.activeSelf){
+		bossHpText.SetActive(true);
+	}
 	var pos = Vector3(transform.position.x - 0.02,transform.position.y,transform.position.z);
 	bossHpText.transform.position = Camera.main.WorldToViewportPoint(pos);
 }

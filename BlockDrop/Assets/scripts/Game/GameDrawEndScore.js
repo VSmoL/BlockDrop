@@ -43,22 +43,24 @@ function showMultiplier(){
 	if (GameMaster.HiScore){
 		endGameHighScore.SetActive(true);
 	}
-	if(GameMaster.endScore > GameMaster.threeStarPoint){
-		oneStar.SetActive(true);
-		yield WaitForSeconds(0.6);
-		twoStar.SetActive(true);
-		yield WaitForSeconds(0.6);
-		threeStar.SetActive(true);
-		yield WaitForSeconds(0.6);
-	}
-	else if(GameMaster.endScore > GameMaster.twoStarPoint){
-		oneStar.SetActive(true);
-		yield WaitForSeconds(0.6);
-		twoStar.SetActive(true);
-		yield WaitForSeconds(0.6);
-	}
-	else if(GameMaster.endScore > GameMaster.oneStarPoint){
-		oneStar.SetActive(true);
-		yield WaitForSeconds(0.6);
+	if(GameMaster.StageMode){
+		if(GameMaster.endScore > GameMaster.threeStarPoint){
+			oneStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+			twoStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+			threeStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+		}
+		else if(GameMaster.endScore > GameMaster.twoStarPoint){
+			oneStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+			twoStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+		}
+		else if(GameMaster.endScore > GameMaster.oneStarPoint){
+			oneStar.SetActive(true);
+			yield WaitForSeconds(0.6);
+		}
 	}
 }

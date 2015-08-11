@@ -1,29 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GoogleMobileAds\GoogleAdShow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShopPrice.js">
     <Files>
-      <File FileName="Assets\GoogleMobileAds\GoogleAdShow.cs" Line="27" Column="5" />
-      <File FileName="Assets\scripts\Game\EnemyMovementScirpt.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameExtraSpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameBombSpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\ScannerMovement.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ShopShapeCheckUnlocked.js" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\ScalePopUpWindow.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\EnemySpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameStart.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ButtonPressNextScene.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\StageSelectNextScene.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameOverTextAnimation.js" Line="1" Column="1" />
-      <File FileName="Assets\GoogleMobileAds\GoogleAdVideo.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameMaster.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameEnd.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Game\GameDrawHiScore.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\CredistNextScene.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShopPrice.js" Line="4" Column="37" />
+      <File FileName="Assets\scripts\Game\BossHealthAttr.js" Line="15" Column="29" />
+      <File FileName="Assets\scripts\Game\EnemyDestroy.js" Line="13" Column="20" />
+      <File FileName="Assets\scripts\Game\GameEnd.js" Line="7" Column="31" />
+      <File FileName="Assets\scripts\Game\GamePause.js" Line="26" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="33" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="38" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="43" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="48" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="53" />
+      <Breakpoint file="D:\KoodausProjektit\Unity\EndlessRunner\Assets\Scripts\ChangeEnemyColors.cs" line="58" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

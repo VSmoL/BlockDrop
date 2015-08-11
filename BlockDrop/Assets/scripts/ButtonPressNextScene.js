@@ -90,7 +90,7 @@ function Update(){
 						if(EditorPrefsX.GetBool("isMusic")){
 							bgMusic = GameObject.Find("BackgroundMusic");
 	    					bgMusic.GetComponent(AudioSource).loop = true;
-	    					bgMusic.GetComponent(AudioSource).clip = bgMusic.GetComponent(PlayRandomSong).songList[10];
+	    					bgMusic.GetComponent(AudioSource).clip = bgMusic.GetComponent(PlayRandomSong).songList[7];
 	    					bgMusic.GetComponent(AudioSource).volume = 0.5;
 	    					bgMusic.GetComponent(AudioSource).Play();
 						}
