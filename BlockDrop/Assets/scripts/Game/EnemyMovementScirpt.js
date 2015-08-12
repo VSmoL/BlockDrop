@@ -27,7 +27,7 @@ function Start () {
 }
 
 function moveStop(){
-	yield WaitForSeconds(Random.Range(0.5, 1.0));
+	yield WaitForSeconds(Random.Range(0.2, 1.0));
 	while(GameMaster.gameMoveStop){
 		GetComponent.<Rigidbody2D>().velocity.y = 0;
 		yield WaitForSeconds(Random.Range(0.0, 1.0));
