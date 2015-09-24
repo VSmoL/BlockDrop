@@ -15,6 +15,7 @@ var spawnBottomX2 : float;
 var spawnPoint;
 var doubleChance : float;
 var enemySpawned : float;
+var enemySpawnZValue : float;
 
 
 function startSpawn(){
@@ -76,18 +77,26 @@ function addRandomValues(){
 }
 
 function spawnEnemy(){
+
+	enemySpawnZValue += 1;
+	
+	if(enemySpawnZValue == 10){
+		enemySpawnZValue = 0;
+	}
+
 	if(GameMaster.gameTopBottom){
 		var TopBottom = Random.Range(0,2);
+		
 		if (TopBottom == 0){
 			// Randomly pick a point within the spawn object
-	    	spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+	    	spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,enemySpawnZValue);
 	    	
 	    	// Create an enemy at the 'spawnPoint' position
 	   		Instantiate(enemy, spawnPoint, Quaternion.identity);
 		}
 		else if (TopBottom == 1){
 			// Randomly pick a point within the spawn object
-			spawnPoint = new Vector3(Random.Range(spawnBottomX1, spawnBottomX2), bottomSpawn.transform.position.y,1);
+			spawnPoint = new Vector3(Random.Range(spawnBottomX1, spawnBottomX2), bottomSpawn.transform.position.y,enemySpawnZValue);
 			
 			// Create an enemy at the 'spawnPoint' position
 	    	Instantiate(bottomEnemy, spawnPoint, Quaternion.identity);
@@ -102,7 +111,7 @@ function spawnEnemy(){
 			doubleChance += 0.1;
 			
 			// Randomly pick a point within the spawn object
-		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,enemySpawnZValue);
 			
 		    // Create an enemy at the 'spawnPoint' position
 		    Instantiate(enemy, spawnPoint, Quaternion.identity);
@@ -115,7 +124,7 @@ function spawnEnemy(){
 		}
 		else{
 			// Randomly pick a point within the spawn object
-		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+		    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,enemySpawnZValue);
 			
 		    // Create an enemy at the 'spawnPoint' position
 		    Instantiate(enemy, spawnPoint, Quaternion.identity);
@@ -124,7 +133,7 @@ function spawnEnemy(){
 	}
 	else{
 		// Randomly pick a point within the spawn object
-	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,1);
+	    spawnPoint = new Vector3(Random.Range(spawnX1, spawnX2), transform.position.y,enemySpawnZValue);
 		
 	    // Create an enemy at the 'spawnPoint' position
 	    Instantiate(enemy, spawnPoint, Quaternion.identity);

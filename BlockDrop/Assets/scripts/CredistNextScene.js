@@ -15,8 +15,8 @@ function Update(){
 					case "OjisTwitter":
 						Application.OpenURL ("https://twitter.com/Vsmoli");
 						break;
-					case "OjisFB":
-						Application.OpenURL ("https://www.facebook.com/VSmoL");
+					case "OjisGPlay":
+						Application.OpenURL ("https://play.google.com/store/apps/developer?id=Timo+Ojaranta");
 						break;
 					case "OjisJoku":
 						Application.OpenURL ("");	

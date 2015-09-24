@@ -1,6 +1,7 @@
 #pragma strict
 
 var bgMusic : GameObject;
+var ConfirmPopUp : GameObject;
 
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
@@ -54,6 +55,7 @@ function Update(){
 						GameMaster.StageMode = false;
 						GameMaster.RandomMode = true;
 						GameMaster.Scoreattack = false;
+						GameMaster.stageNumber = 0;
 						GameMaster.gameMode = "Random";
 						Application.LoadLevel("Game");
 						break;
@@ -62,8 +64,13 @@ function Update(){
 						GameMaster.StageMode = false;
 						GameMaster.RandomMode = false;
 						GameMaster.Scoreattack = true;
+						GameMaster.stageNumber = 0;
 						GameMaster.gameMode = "ScoreAttack";
 						Application.LoadLevel("Game");
+						break;
+						
+					case "HighScoresButton":
+						Application.LoadLevel("Leaderboard");
 						break;
 					
 					//Stage select buttons
@@ -145,6 +152,10 @@ function Update(){
 						}
 						break;
 					case "ClearDataButton":
+						ConfirmPopUp.SetActive(true);
+						break;
+						
+					case "YesButton":
 						PlayerPrefs.DeleteAll();
 						
 						//Game started first time
@@ -164,10 +175,22 @@ function Update(){
 						GameObject.Find("MusicButton").GetComponent.<Renderer>().material.color.a = 1;
 						GameObject.Find("SfxButton").GetComponent.<Renderer>().material.color.a = 1;
 						
+						ConfirmPopUp.SetActive(false);
+						break;
+							
+					case "NoButton":
+						ConfirmPopUp.SetActive(false);
+						break;										
+																																	
+					case "ConfirmBG":
 						break;
 
 					case "BackButton":
 						Application.LoadLevel("MainMenu");
+						break;
+					
+					case "LeaderboardBackButton":
+						Application.LoadLevel("ModeSelect");
 						break;
 						
 					case "ExitButton":

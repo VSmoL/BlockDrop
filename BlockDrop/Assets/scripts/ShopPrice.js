@@ -1,4 +1,4 @@
 ﻿#pragma strict
 
-static var normalColorPrice = 20000;
-static var normalShapePrice = 40000;
+static var normalColorPrice = 10000;
+static var normalShapePrice = 15000;

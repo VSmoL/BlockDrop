@@ -105,6 +105,7 @@
      <Compile Include="Assets\scripts\MenuDrawGoldBlock.js" />
      <Compile Include="Assets\scripts\NoDestroy.js" />
      <Compile Include="Assets\scripts\PressedButton.js" />
+     <Compile Include="Assets\scripts\RecordListWrite.js" />
      <Compile Include="Assets\scripts\ScaleScreen.js" />
      <Compile Include="Assets\scripts\ScreenFade.js" />
      <Compile Include="Assets\scripts\ShopColorBuy.js" />
