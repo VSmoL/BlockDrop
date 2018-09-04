@@ -3,7 +3,19 @@ guid: 931df4d8e3f4b1145b0be811456ff63e
 folderAsset: yes
 timeCreated: 1434728054
 licenseType: Free
-DefaultImporter:
+PluginImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Any:
+      enabled: 1
+      settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -7,8 +7,6 @@ public var GameEndPreviousBest : GameObject;
 public var RestartButton : GameObject;
 public var MainMenuButton : GameObject;
 
-public var GoogleAd : GameObject;
-
 function Start () {
 	var fontSize = 30.00;
 	while(GetComponent.<GUIText>().color.a < 1){
@@ -22,9 +20,6 @@ function Start () {
 			childText.gameObject.GetComponent(GUIText).fontSize = transform.GetComponent.<GUIText>().fontSize;
 		}
 		yield WaitForSeconds(0.01);
-	}
-	if(GameMaster.GameRetries % 2 == 0){
-		GoogleAd.SendMessage("ShowVideo");
 	}
 	
 	ScoreText.SetActive(true);
